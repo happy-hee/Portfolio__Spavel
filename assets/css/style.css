@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap");
-@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* Color */
 * {
@@ -19,9 +18,9 @@ html {
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.285;
-  color: #333;
+  color: #000;
   background-color: #fff;
 }
 
@@ -88,13 +87,51 @@ select {
   appearance: none;
   width: 100%;
   padding: 1rem 0;
-  background: url(../images/icon_down_arrow.png) top 50% right 1rem no-repeat;
+  background: url(../images/icon/icon_arrow_white.png) top 50% right 1rem no-repeat;
   background-size: 13px 13px;
-  outline: 0 none;
   border-width: 0 0 1px 0;
   border-color: #e0e0e0;
   border-radius: 0;
   font-size: 1.6rem;
+}
+
+/* slide
+========================================================================== */
+.slide {
+  position: relative;
+}
+.slide__item {
+  width: 90%;
+}
+.slide__item:last-child {
+  padding-right: 2rem;
+}
+.slide__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 30rem;
+  max-height: 40rem;
+}
+.slide__text-box {
+  padding: 2rem 0;
+  text-align: left;
+}
+.slide__title {
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.slide__content {
+  font-size: 1.6rem;
+  color: #777;
+}
+.slide__scrollbar {
+  height: 0.5rem;
+  margin: 2rem 2rem 0 0;
+}
+.slide__scrollbar .swiper-scrollbar-drag {
+  background: #6c0be3;
 }
 
 /* LOGO
@@ -169,7 +206,7 @@ select {
 .main-visual {
   position: relative;
   padding: 5.7rem 2rem 2rem 2rem;
-  height: 40rem;
+  height: 48rem;
   background-color: #000;
   text-align: left;
   color: #fff;
@@ -179,7 +216,7 @@ select {
 .main-visual__title {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-45%);
   left: 2rem;
   font-family: "Poppins", sans-serif;
 }
@@ -197,6 +234,8 @@ select {
 ========================================================================== */
 .reserve__section {
   padding: 1.4rem 2rem;
+  color: #fff;
+  background-color: #000;
 }
 .reserve__row {
   display: flex;
@@ -207,19 +246,52 @@ select {
   margin-bottom: 1.4rem;
 }
 .reserve__title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 300;
   display: block;
 }
 .reserve__input {
   margin-top: 0.4rem;
-  color: #6c0be3;
+  background: #000;
+  color: #fff;
+  font-size: 1.8rem;
 }
 .reserve__select {
   margin-top: 0.4rem;
+  color: #fff;
+  font-size: 1.8rem;
 }
-.reserve__select option {
-  border: 1px solid red;
+
+/* Section
+========================================================================== */
+.section {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+.section__slide {
+  position: relative;
+  margin-left: 2rem;
+}
+.section__slide .skip-navigation {
+  right: 2rem;
+}
+.section__title-wrapper {
+  margin-bottom: 4rem;
+}
+.section__title {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* Planet
+========================================================================== */
+.planet__section {
+  color: #000;
+  background-color: #fff;
 }
 
 /* Media query
@@ -238,4 +310,40 @@ select {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+/* 접근성 네비게이션 */
+.skip-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.skip-navigation__btn {
+  position: absolute;
+  width: auto;
+  padding: 0 1rem;
+  line-height: 30px;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.skip-navigation__btn--prev {
+  left: -100%;
+}
+.skip-navigation__btn--prev:focus, .skip-navigation__btn--prev:active {
+  left: 0;
+}
+.skip-navigation__btn--next {
+  right: -100%;
+}
+.skip-navigation__btn--next:focus, .skip-navigation__btn--next:active {
+  right: 0;
+}
+
+/* 기타
+========================================================================== */
+.datepicker-picker {
+  color: #333;
 }

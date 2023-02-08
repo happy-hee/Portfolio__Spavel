@@ -26,7 +26,7 @@
               <img
                 class="logo__icon"
                 src="./assets/images/logo.svg"
-                alt="로고" />
+                alt="logo" />
               <span class="logo__text">SPAVEL</span>
             </a>
           </span>
@@ -36,8 +36,8 @@
         <button class="side-menu__btn side-menu__open-btn" type="button">
           <img
             class="side-menu__btn-img"
-            src="./assets/images/icon_burger.png"
-            alt="메뉴 열기" />
+            src="./assets/images/icon/icon_burger.png"
+            alt="menu open" />
         </button>
       </div>
     </header>
@@ -52,18 +52,18 @@
     </div>
 
     <!-- Reserve -->
-    <section class="section reserve__section" id="reserveSection">
+    <section class="reserve__section" id="reserveSection">
       <h2 class="sr-only">Reserve</h2>
       <!-- Checkin / Checkout -->
       <div class="reserve__row">
         <div class="reserve__item">
-          <div class="reserve__title">Checkin</div>
+          <label for="checkinInput" class="reserve__title">Checkin</label>
           <div class="reserve__date">
             <input class="reserve__input" type="text" name="checkinInput" />
           </div>
         </div>
         <div class="reserve__item">
-          <div class="reserve__title">Checkout</div>
+          <label for="checkoutInput" class="reserve__title">Checkout</label>
           <div class="reserve__date">
             <input class="reserve__input" type="text" name="checkoutInput" />
           </div>
@@ -94,7 +94,97 @@
       </div>
     </section>
 
-    <div class="content"></div>
+    <!-- Planet -->
+    <section class="section planet__section">
+      <div class="section__title-wrapper">
+        <h2 class="section__title">Planet info</h2>
+      </div>
+      <!-- 슬라이드 -->
+      <div class="section__con section__slide">
+        <div class="swiper slide planetSlide">
+          <div class="swiper-wrapper slide__wrapper">
+            <!-- Saturn -->
+            <div class="swiper-slide slide__item">
+              <img
+                class="slide__img"
+                src="./assets/images/planet/planet_saturn.jpg"
+                alt="Saturn" />
+              <div class="slide__text-box">
+                <div class="slide__title">Saturn</div>
+                <div class="slide__content">
+                  Suspendisse ligula justo, placerat a mauris nec, aliquam
+                  dictum nisl. Nunc imperdiet nec velit a vulputate.
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide__item">
+              <img
+                class="slide__img"
+                src="./assets/images/planet/planet_neptune.jpg"
+                alt="Neptune" />
+              <div class="slide__text-box">
+                <div class="slide__title">Neptune</div>
+                <div class="slide__content">
+                  Nullam vulputate vehicula pulvinar. Integer pellentesque
+                  commodo semper. Quisque tincidunt sodales ultricies.
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide__item">
+              <img
+                class="slide__img"
+                src="./assets/images/planet/planet_uranus.jpg"
+                alt="Uranus" />
+              <div class="slide__text-box">
+                <div class="slide__title">Uranus</div>
+                <div class="slide__content">
+                  Nullam sollicitudin sapien et congue elementum. Praesent id
+                  lectus viverra, blandit orci id, viverra velit.
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide__item">
+              <img
+                class="slide__img"
+                src="./assets/images/planet/planet_moon.jpg"
+                alt="Moon" />
+              <div class="slide__text-box">
+                <div class="slide__title">Moon</div>
+                <div class="slide__content">
+                  Donec blandit et odio vel facilisis. Morbi ut dui eu ipsum
+                  interdum feugiat. Sed varius ullamcorper nisi sit amet semper.
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide__item">
+              <img
+                class="slide__img"
+                src="./assets/images/planet/planet_galaxy.jpg"
+                alt="Galaxy" />
+              <div class="slide__text-box">
+                <div class="slide__title">Galaxy</div>
+                <div class="slide__content">
+                  Suspendisse sed nunc at metus pretium facilisis nec sit amet
+                  ante. Sed lorem ex, tincidunt ac tristique ut, dapibus nec
+                  diam.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__scrollbar"></div>
+        </div>
+
+        <!-- (웹접근성) Skip navigation -->
+        <div class="skip-navigation">
+          <div class="skip-navigation__btn skip-navigation__btn--prev">
+            Prev Slide
+          </div>
+          <div class="skip-navigation__btn skip-navigation__btn--next">
+            Next Slide
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- 스크립트 -->
     <!-- Date Picker 스크립트 -->

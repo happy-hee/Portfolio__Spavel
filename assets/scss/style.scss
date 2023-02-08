@@ -13,11 +13,11 @@ html {
 }
 
 body {
-  font-family: $font-Content;
+  font-family: $font-content;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.285;
-  color: #333;
+  color: #000;
   background-color: #fff;
 }
 
@@ -82,13 +82,52 @@ select {
   appearance: none;
   width: 100%;
   padding: 1rem 0;
-  background: url(../images/icon_down_arrow.png) top 50% right 1rem no-repeat;
+  background: url(../images/icon/icon_arrow_white.png) top 50% right 1rem
+    no-repeat;
   background-size: 13px 13px;
-  outline: 0 none;
   border-width: 0 0 1px 0;
   border-color: $border-color;
   border-radius: 0;
   font-size: 1.6rem;
+}
+
+/* slide
+========================================================================== */
+.slide {
+  position: relative;
+  &__item {
+    width: 90%;
+    &:last-child {
+      padding-right: 2rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-height: 30rem;
+    max-height: 40rem;
+  }
+  &__text-box {
+    padding: 2rem 0;
+    text-align: left;
+  }
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+  &__content {
+    font-size: 1.6rem;
+    color: #777;
+  }
+  &__scrollbar {
+    height: 0.5rem;
+    margin: 2rem 2rem 0 0;
+    .swiper-scrollbar-drag {
+      background: $main-color;
+    }
+  }
 }
 
 /* LOGO
@@ -105,7 +144,7 @@ select {
   &__text {
     display: block;
     margin-left: 0.6rem;
-    font-family: $font-Title-en;
+    font-family: $font-title-en;
     font-size: 2.4rem;
     font-weight: 700;
     color: #fff;
@@ -165,7 +204,7 @@ select {
 .main-visual {
   position: relative;
   padding: 5.7rem 2rem 2rem 2rem;
-  height: 40rem;
+  height: 48rem;
   background-color: #000;
   text-align: left;
   color: #fff;
@@ -175,9 +214,9 @@ select {
   &__title {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     left: 2rem;
-    font-family: $font-Title-en;
+    font-family: $font-title-en;
     &--main {
       font-size: 4rem;
       font-weight: 700;
@@ -195,6 +234,7 @@ select {
 .reserve {
   &__section {
     padding: 1.4rem 2rem;
+    @include dark-bg-content;
   }
   &__row {
     display: flex;
@@ -205,19 +245,53 @@ select {
     margin-bottom: 1.4rem;
   }
   &__title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 300;
     display: block;
   }
   &__input {
     margin-top: 0.4rem;
-    color: $main-Color;
+    background: #000;
+    color: #fff;
+    font-size: 1.8rem;
   }
   &__select {
     margin-top: 0.4rem;
-    option {
-      border: 1px solid red;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+
+/* Section
+========================================================================== */
+.section {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+  text-align: center;
+  &__slide {
+    position: relative;
+    margin-left: 2rem;
+    .skip-navigation {
+      right: 2rem;
     }
+  }
+  &__title-wrapper {
+    margin-bottom: 4rem;
+  }
+  &__title {
+    position: relative;
+    font-family: $font-title-en;
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+}
+
+/* Planet
+========================================================================== */
+.planet {
+  &__section {
+    @include light-bg-content;
   }
 }
 
@@ -244,4 +318,41 @@ select {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+/* 접근성 네비게이션 */
+.skip-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  &__btn {
+    position: absolute;
+    width: auto;
+    padding: 0 1rem;
+    line-height: 30px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+    &--prev {
+      left: -100%;
+      &:focus,
+      &:active {
+        left: 0;
+      }
+    }
+    &--next {
+      right: -100%;
+      &:focus,
+      &:active {
+        right: 0;
+      }
+    }
+  }
+}
+
+/* 기타
+========================================================================== */
+.datepicker-picker {
+  color: #333;
 }

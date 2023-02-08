@@ -36,3 +36,48 @@ const datePickerOption = {
 
 const checkinDatepicker = new Datepicker(checkinInput, datePickerOption);
 const checkoutDatepicker = new Datepicker(checkoutInput, datePickerOption);
+
+/**
+ * 슬라이드
+ * https://swiperjs.com/
+ */
+
+//슬라이드 옵션
+const slideOption = {
+  slidesPerView: "auto",
+  loop: false,
+  clickable: true,
+  allowTouchMove: true,
+  // 네비게이션
+  navigation: {
+    prevEl: ".skip-navigation__btn--prev",
+    nextEl: ".skip-navigation__btn--next",
+  },
+  // 스크롤바
+  scrollbar: {
+    el: ".slide__scrollbar",
+  },
+  // 접근성
+  a11y: {
+    enabled: true,
+    nextSlideMessage: "Next Slide",
+    prevSlideMessage: "Prev Slide",
+    slideLabelMessage: "{{index}} / {{slidesLength}}",
+  },
+  spaceBetween: 15,
+  // 반응형 breakpoints
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      spaceBetween: 30,
+    },
+    // when window width is >= 1024px
+    1024: {
+      spaceBetween: 40,
+    },
+  },
+};
+
+// Planet 슬라이드 적용
+const planetSlide = document.querySelector(".planetSlide");
+const swiper = new Swiper(planetSlide, slideOption);
