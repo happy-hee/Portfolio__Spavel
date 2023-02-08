@@ -1,0 +1,175 @@
+@import "variable";
+
+* {
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-Content;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.285;
+  color: #333;
+  background-color: #fff;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+/* LOGO
+========================================================================== */
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  &__text {
+    display: block;
+    margin-left: 0.6rem;
+    font-family: $font-Title-en;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+/* HEADER
+========================================================================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  z-index: 2;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+  &__gnb {
+    display: none;
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  padding: 3rem;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f6f7f9;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+  &--open {
+    left: 0;
+    transition: left 0.2s ease-in-out;
+  }
+  &__btn {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  &__btn-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Main Visual
+========================================================================== */
+.main-visual {
+  position: relative;
+  padding: 5.7rem 2rem 2rem 2rem;
+  height: 40rem;
+  background-color: #000;
+  text-align: left;
+  color: #fff;
+  background-image: url("../images/space_bg_1.jpg");
+  background-size: cover;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+    font-family: $font-Title-en;
+    &--main {
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    &--sub {
+      font-size: 2.2rem;
+      font-weight: 300;
+    }
+  }
+}
+
+/* Media query
+========================================================================== */
+/* Tablet */
+@media (min-width: 768px) {
+}
+/* Large Tablet */
+@media (min-width: 1024px) {
+}
+/* Desctop */
+@media (min-width: 1280px) {
+}
