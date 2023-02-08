@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Date Picker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>SPAVEL</title>
   </head>
@@ -43,7 +47,55 @@
       </div>
     </div>
 
+    <!-- Reserve -->
+    <section class="section reserve__section" id="reserveSection">
+      <h2 class="sr-only">Reserve</h2>
+      <!-- Checkin / Checkout -->
+      <div class="reserve__row">
+        <div class="reserve__item">
+          <div class="reserve__title">Checkin</div>
+          <div class="reserve__date">
+            <input class="reserve__input" type="text" name="checkinInput" />
+          </div>
+        </div>
+        <div class="reserve__item">
+          <div class="reserve__title">Checkout</div>
+          <div class="reserve__date">
+            <input class="reserve__input" type="text" name="checkoutInput" />
+          </div>
+        </div>
+      </div>
+      <!-- Planet / Guests -->
+      <div class="reserve__row">
+        <div class="reserve__item reserve__item--inline">
+          <label class="reserve__title" for="planet">Planet</label>
+          <select class="reserve__select" name="planet" id="planet">
+            <option value="Saturn">Saturn</option>
+            <option value="Neptune">Neptune</option>
+            <option value="Moon">Moon</option>
+            <option value="Uranus">Uranus</option>
+            <option value="Galaxy">Galaxy</option>
+          </select>
+        </div>
+        <div class="reserve__item reserve__item--inline">
+          <label class="reserve__title" for="guests">Guests</label>
+          <select class="reserve__select" name="guests" id="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
     <div class="content"></div>
+
+    <!-- 스크립트 -->
+    <!-- Date Picker 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

@@ -15,7 +15,7 @@ html {
 body {
   font-family: $font-Content;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.285;
   color: #333;
   background-color: #fff;
@@ -61,6 +61,34 @@ svg {
 button {
   border: 0;
   background-color: transparent;
+}
+
+/* input & selectbox
+========================================================================== */
+input {
+  width: 100%;
+  padding: 1rem 0;
+  border-width: 0 0 1px 0;
+  border-color: $border-color;
+  font-size: 1.6rem;
+}
+select::-ms-expand {
+  display: none;
+}
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 1rem 0;
+  background: url(../images/icon_down_arrow.png) top 50% right 1rem no-repeat;
+  background-size: 13px 13px;
+  outline: 0 none;
+  border-width: 0 0 1px 0;
+  border-color: $border-color;
+  border-radius: 0;
+  font-size: 1.6rem;
 }
 
 /* LOGO
@@ -152,12 +180,43 @@ button {
     font-family: $font-Title-en;
     &--main {
       font-size: 4rem;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 2rem;
     }
     &--sub {
       font-size: 2.2rem;
       font-weight: 300;
+    }
+  }
+}
+
+/* Reserve
+========================================================================== */
+.reserve {
+  &__section {
+    padding: 1.4rem 2rem;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 48%;
+    margin-bottom: 1.4rem;
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: block;
+  }
+  &__input {
+    margin-top: 0.4rem;
+    color: $main-Color;
+  }
+  &__select {
+    margin-top: 0.4rem;
+    option {
+      border: 1px solid red;
     }
   }
 }
@@ -172,4 +231,17 @@ button {
 }
 /* Desctop */
 @media (min-width: 1280px) {
+}
+
+/* 웹접근성
+========================================================================== */
+/* 스크린리더에서만 읽혀지도록 숨김처리 */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
