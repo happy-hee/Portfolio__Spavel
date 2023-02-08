@@ -5,7 +5,7 @@ $font-title-en: "Poppins", sans-serif;
 $font-content: "Noto Sans KR", sans-serif;
 
 /* Color */
-$main-color: #6c0be3;
+$point-color: #0833b5;
 $border-color: #e0e0e0;
 
 @mixin dark-bg-content {
@@ -15,4 +15,33 @@ $border-color: #e0e0e0;
 @mixin light-bg-content {
   color: #000;
   background-color: #fff;
+}
+
+@mixin btn-default {
+  display: inline-block;
+  width: 100%;
+  padding: 1.3rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 0;
+  &:hover {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+}
+@mixin btn-white {
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+}
+@mixin btn-white-hover {
+  border: 1px solid $point-color;
+  background-color: $point-color;
+  color: #fff;
+}
+@mixin btn-point {
+  border: 1px solid $point-color;
+  background-color: $point-color;
+  color: #fff;
 }

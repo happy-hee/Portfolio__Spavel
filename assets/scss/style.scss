@@ -130,7 +130,7 @@ select {
     height: 0.5rem;
     margin: 2rem 2rem 0 0;
     .swiper-scrollbar-drag {
-      background: $main-color;
+      background: $point-color;
     }
   }
 }
@@ -143,8 +143,8 @@ select {
     align-items: center;
   }
   &__icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
   }
   &__text {
     display: block;
@@ -240,10 +240,12 @@ select {
   &__section {
     padding: 1.4rem 2rem;
     @include dark-bg-content;
+    text-align: center;
   }
   &__row {
     display: flex;
     justify-content: space-between;
+    text-align: left;
   }
   &__item {
     width: 48%;
@@ -264,6 +266,11 @@ select {
     margin-top: 0.4rem;
     color: #fff;
     font-size: 1.8rem;
+  }
+  &__btn {
+    @include btn-default;
+    @include btn-point;
+    margin-top: 1.6rem;
   }
 }
 

@@ -136,7 +136,7 @@ select {
   margin: 2rem 2rem 0 0;
 }
 .slide__scrollbar .swiper-scrollbar-drag {
-  background: #6c0be3;
+  background: #0833b5;
 }
 
 /* LOGO
@@ -146,8 +146,8 @@ select {
   align-items: center;
 }
 .logo__icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
 }
 .logo__text {
   display: block;
@@ -241,10 +241,12 @@ select {
   padding: 1.4rem 2rem;
   color: #fff;
   background-color: #000;
+  text-align: center;
 }
 .reserve__row {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 .reserve__item {
   width: 48%;
@@ -265,6 +267,23 @@ select {
   margin-top: 0.4rem;
   color: #fff;
   font-size: 1.8rem;
+}
+.reserve__btn {
+  display: inline-block;
+  width: 100%;
+  padding: 1.3rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 0;
+  border: 1px solid #0833b5;
+  background-color: #0833b5;
+  color: #fff;
+  margin-top: 1.6rem;
+}
+.reserve__btn:hover {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Section
