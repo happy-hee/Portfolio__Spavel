@@ -136,7 +136,7 @@ select {
   margin: 2rem 2rem 0 0;
 }
 .slide__scrollbar .swiper-scrollbar-drag {
-  background: #0833b5;
+  background: #000;
 }
 
 /* LOGO
@@ -275,8 +275,8 @@ select {
   font-size: 1.6rem;
   font-weight: 400;
   border-radius: 0;
-  border: 1px solid #0833b5;
-  background-color: #0833b5;
+  border: 1px solid #0739d2;
+  background-color: #0739d2;
   color: #fff;
   margin-top: 1.6rem;
 }
@@ -316,6 +316,87 @@ select {
 .planet__section {
   color: #000;
   background-color: #fff;
+}
+
+/* Rank
+========================================================================== */
+.rank__section {
+  color: #000;
+  background-color: #f9f9f9;
+}
+.rank__content {
+  padding: 0 2rem;
+}
+.rank__top {
+  margin-bottom: 2rem;
+}
+.rank__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rank__tab-item {
+  padding: 1rem 0;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid transparent;
+}
+.rank__tab-item.active {
+  display: inline-block;
+  border-bottom-color: #0739d2;
+}
+.rank__tab-content {
+  display: none;
+}
+.rank__tab-content.active {
+  display: block;
+}
+.rank__list {
+  padding: 1rem 0;
+}
+.rank__link {
+  position: relative;
+  display: flex;
+}
+.rank__img-wrapper {
+  position: relative;
+  width: 8rem;
+  min-width: 8rem;
+  height: 8rem;
+}
+.rank__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rank__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  background-color: #0739d2;
+  color: #fff;
+}
+.rank__info-wrapper {
+  margin-left: 2rem;
+  text-align: left;
+}
+.rank__name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.rank__info {
+  font-size: 1.6rem;
+  margin-top: 0.4rem;
+  color: #333;
+}
+.rank__date {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #999999;
 }
 
 /* Media query

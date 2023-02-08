@@ -130,7 +130,7 @@ select {
     height: 0.5rem;
     margin: 2rem 2rem 0 0;
     .swiper-scrollbar-drag {
-      background: $point-color;
+      background: #000;
     }
   }
 }
@@ -304,6 +304,88 @@ select {
 .planet {
   &__section {
     @include light-bg-content;
+  }
+}
+
+/* Rank
+========================================================================== */
+.rank {
+  &__section {
+    @include gray-bg-content;
+  }
+  &__content {
+    padding: 0 2rem;
+  }
+  &__top {
+    margin-bottom: 2rem;
+  }
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__tab-item {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid transparent;
+    &.active {
+      display: inline-block;
+      border-bottom-color: $point-color;
+    }
+  }
+  &__tab-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__list {
+    padding: 1rem 0;
+  }
+  &__link {
+    position: relative;
+    display: flex;
+  }
+  &__img-wrapper {
+    position: relative;
+    width: 8rem;
+    min-width: 8rem;
+    height: 8rem;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    background-color: $point-color;
+    color: #fff;
+  }
+  &__info-wrapper {
+    margin-left: 2rem;
+    text-align: left;
+  }
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  &__info {
+    font-size: 1.6rem;
+    margin-top: 0.4rem;
+    color: #333;
+  }
+  &__date {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #999999;
   }
 }
 

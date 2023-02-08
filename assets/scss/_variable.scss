@@ -5,7 +5,7 @@ $font-title-en: "Poppins", sans-serif;
 $font-content: "Noto Sans KR", sans-serif;
 
 /* Color */
-$point-color: #0833b5;
+$point-color: #0739d2;
 $border-color: #e0e0e0;
 
 @mixin dark-bg-content {
@@ -15,6 +15,10 @@ $border-color: #e0e0e0;
 @mixin light-bg-content {
   color: #000;
   background-color: #fff;
+}
+@mixin gray-bg-content {
+  color: #000;
+  background-color: #f9f9f9;
 }
 
 @mixin btn-default {

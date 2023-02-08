@@ -81,3 +81,25 @@ const slideOption = {
 // Planet 슬라이드 적용
 const planetSlide = document.querySelector(".planetSlide");
 const swiper = new Swiper(planetSlide, slideOption);
+
+/**
+ * 랭크 탭 메뉴
+ */
+const tabItem = document.querySelectorAll(".rank__tab-item");
+const tabContent = document.querySelectorAll(".rank__tab-content");
+
+tabItem.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
+    tabContent.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    tabItem.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    tabItem[index].classList.add("active");
+    tabContent[index].classList.add("active");
+  });
+});
