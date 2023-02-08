@@ -8,11 +8,11 @@ $font-content: "Noto Sans KR", sans-serif;
 $point-color: #0739d2;
 $border-color: #e0e0e0;
 
-@mixin dark-bg-content {
+@mixin black-bg-content {
   color: #fff;
   background-color: #000;
 }
-@mixin light-bg-content {
+@mixin white-bg-content {
   color: #000;
   background-color: #fff;
 }

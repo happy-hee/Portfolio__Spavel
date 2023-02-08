@@ -41,9 +41,9 @@ const checkoutDatepicker = new Datepicker(checkoutInput, datePickerOption);
  * 슬라이드
  * https://swiperjs.com/
  */
-
-//슬라이드 옵션
-const slideOption = {
+// Planet 슬라이드 적용
+const planetSlide = document.querySelector(".planetSlide");
+const planetSwiper = new Swiper(planetSlide, {
   slidesPerView: "auto",
   loop: false,
   clickable: true,
@@ -56,6 +56,7 @@ const slideOption = {
   // 스크롤바
   scrollbar: {
     el: ".slide__scrollbar",
+    hide: true,
   },
   // 접근성
   a11y: {
@@ -64,7 +65,7 @@ const slideOption = {
     prevSlideMessage: "Prev Slide",
     slideLabelMessage: "{{index}} / {{slidesLength}}",
   },
-  spaceBetween: 15,
+  spaceBetween: 14,
   // 반응형 breakpoints
   breakpoints: {
     // when window width is >= 768px
@@ -76,11 +77,29 @@ const slideOption = {
       spaceBetween: 40,
     },
   },
-};
+});
 
-// Planet 슬라이드 적용
-const planetSlide = document.querySelector(".planetSlide");
-const swiper = new Swiper(planetSlide, slideOption);
+//News 슬라이드 적용
+const newsSlide = document.querySelector(".newsSlide");
+const newsSwiper = new Swiper(newsSlide, {
+  slidesPerView: "auto",
+  loop: false,
+  clickable: true,
+  allowTouchMove: true,
+  spaceBetween: 14,
+  // 스크롤바
+  scrollbar: {
+    el: ".slide__scrollbar",
+    hide: true,
+  },
+  // 접근성
+  a11y: {
+    enabled: true,
+    nextSlideMessage: "Next Slide",
+    prevSlideMessage: "Prev Slide",
+    slideLabelMessage: "{{index}} / {{slidesLength}}",
+  },
+});
 
 /**
  * 랭크 탭 메뉴
