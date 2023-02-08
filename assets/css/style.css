@@ -124,7 +124,12 @@ select {
 }
 .slide__content {
   font-size: 1.6rem;
-  color: #777;
+  color: #333;
+}
+.slide__content--sub {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #999;
 }
 .slide__scrollbar {
   height: 0.5rem;

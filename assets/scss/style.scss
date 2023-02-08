@@ -119,7 +119,12 @@ select {
   }
   &__content {
     font-size: 1.6rem;
-    color: #777;
+    color: #333;
+    &--sub {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      color: #999;
+    }
   }
   &__scrollbar {
     height: 0.5rem;
