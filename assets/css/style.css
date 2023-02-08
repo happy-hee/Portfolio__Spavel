@@ -88,7 +88,7 @@ select {
   width: 100%;
   padding: 1rem 0;
   background: url(../images/icon/icon_arrow_white.png) top 50% right 1rem no-repeat;
-  background-size: 13px 13px;
+  background-size: 16px 16px;
   border-width: 0 0 1px 0;
   border-color: #e0e0e0;
   border-radius: 0;
@@ -99,12 +99,10 @@ select {
 ========================================================================== */
 .slide {
   position: relative;
+  padding-right: 2rem;
 }
 .slide__item {
   width: 90%;
-}
-.slide__item:last-child {
-  padding-right: 2rem;
 }
 .slide__img {
   width: 100%;
@@ -137,6 +135,53 @@ select {
 }
 .slide__scrollbar .swiper-scrollbar-drag {
   background: #000;
+}
+
+/* Accordion menu
+========================================================================== */
+.accordion__item {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.accordion__item.active .accordion__top::after {
+  transform: rotate(-180deg);
+}
+.accordion__item.active .accordion__body {
+  padding: 0 6rem 2rem 2rem;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s cubic-bezier(0, 0.18, 0.58, 0.4);
+}
+.accordion__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 6rem 2rem 2rem;
+  font-size: 1.6rem;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__top::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.9rem;
+  right: 2rem;
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../images/icon/icon_arrow_blue.png) no-repeat;
+  background-size: 100%;
+  transition: transform 0.2s linear;
+}
+.accordion__body {
+  height: 0;
+  overflow: hidden;
+  font-size: 1.6rem;
+  text-align: left;
+  opacity: 0;
 }
 
 /* LOGO
@@ -302,6 +347,7 @@ select {
   right: 2rem;
 }
 .section__title-wrapper {
+  padding: 0 2rem;
   margin-bottom: 3rem;
 }
 .section__title {
@@ -309,6 +355,7 @@ select {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   font-weight: 700;
+  line-height: 1.6;
 }
 
 /* Planet
@@ -366,6 +413,8 @@ select {
   width: 8rem;
   min-width: 8rem;
   height: 8rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 .rank__img {
   width: 100%;
@@ -402,11 +451,18 @@ select {
   color: #999999;
 }
 
+/* Faq
+========================================================================== */
+.faq__section {
+  color: #000;
+  background-color: #fff;
+}
+
 /* News
 ========================================================================== */
 .news__section {
   color: #000;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 .news__section .slide__img {
   min-height: 20rem;
@@ -414,6 +470,7 @@ select {
 .news__section .slide__text-box {
   padding: 1.4rem 2rem 2rem 2rem;
   border: 1px solid #eaeaea;
+  background: #fff;
 }
 .news__section .slide__content p {
   overflow: hidden;
