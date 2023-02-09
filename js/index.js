@@ -140,3 +140,11 @@ accordionItems.forEach((accordionItem) => {
     }
   });
 });
+
+/**
+ * Contact 전송하기
+ */
+
+const submitContact = () => {
+  alert("Successfully sent");
+};

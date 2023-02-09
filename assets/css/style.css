@@ -64,16 +64,24 @@ svg {
 button {
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
-/* input & selectbox
+/* input & selectbox & textarea
 ========================================================================== */
 input {
   width: 100%;
   padding: 1rem 0;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 2px 0;
   border-color: #e0e0e0;
+  border-style: solid;
   font-size: 1.6rem;
+}
+
+.input__style:focus, .input__style:focus-visible {
+  outline: 0;
+  border-width: 0 0 2px 0;
+  border-color: #0739d2;
 }
 
 select::-ms-expand {
@@ -89,16 +97,37 @@ select {
   padding: 1rem 0;
   background: url(../images/icon/icon_arrow_white.png) top 50% right 1rem no-repeat;
   background-size: 16px 16px;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 2px 0;
   border-color: #e0e0e0;
   border-radius: 0;
   font-size: 1.6rem;
+}
+
+textarea {
+  padding: 1.4rem;
+  width: 100%;
+  border-color: #e0e0e0;
+  resize: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.textarea__style:focus, .textarea__style:focus-visible {
+  outline: 0;
+  border-width: 0 0 2px 0;
+  border-color: #0739d2;
+}
+
+::placeholder {
+  color: #bbb;
+  font-size: 1.4rem;
+  font-weight: 300 !important;
 }
 
 /* slide
 ========================================================================== */
 .slide {
   position: relative;
+  margin-right: -2rem;
   padding-right: 2rem;
 }
 .slide__item {
@@ -112,7 +141,7 @@ select {
   max-height: 40rem;
 }
 .slide__text-box {
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   text-align: left;
 }
 .slide__title {
@@ -130,18 +159,18 @@ select {
   color: #999;
 }
 .slide__scrollbar {
-  height: 0.5rem;
-  margin: 2rem 2rem 0 0;
+  height: 0.4rem;
+  margin-top: 2rem;
 }
 .slide__scrollbar .swiper-scrollbar-drag {
-  background: #000;
+  background: #0739d2;
 }
 
 /* Accordion menu
 ========================================================================== */
 .accordion__item {
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
 }
 .accordion__item.active .accordion__top::after {
@@ -339,9 +368,11 @@ select {
   overflow: hidden;
   text-align: center;
 }
+.section__content {
+  padding: 0 2rem;
+}
 .section__slide {
   position: relative;
-  margin-left: 2rem;
 }
 .section__slide .skip-navigation {
   right: 2rem;
@@ -356,6 +387,22 @@ select {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.6;
+}
+.section__btn {
+  display: inline-block;
+  width: 100%;
+  padding: 1.3rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 0;
+  border: 1px solid #0739d2;
+  background-color: #0739d2;
+  color: #fff;
+}
+.section__btn:hover {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Planet
@@ -373,9 +420,6 @@ select {
 .rank__section {
   color: #fff;
   background-color: #000;
-}
-.rank__content {
-  padding: 0 2rem;
 }
 .rank__top {
   margin-bottom: 2rem;
@@ -400,6 +444,10 @@ select {
 }
 .rank__tab-content.active {
   display: block;
+}
+.rank__content {
+  margin-top: -10rem;
+  padding-top: 10rem;
 }
 .rank__list {
   padding: 1rem 0;
@@ -476,6 +524,35 @@ select {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+/* Contact
+========================================================================== */
+.contact__section {
+  color: #000;
+  background-color: #fff;
+}
+.contact__form-wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.contact__form {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.contact__label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.contact__input {
+  height: 4.2rem;
+}
+.contact__textarea {
+  padding: 1.4rem 0;
+  border-width: 0 0 2px 0;
+  height: 9rem;
 }
 
 /* Media query

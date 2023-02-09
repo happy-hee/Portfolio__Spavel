@@ -61,16 +61,28 @@ svg {
 button {
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
-/* input & selectbox
+/* input & selectbox & textarea
 ========================================================================== */
 input {
   width: 100%;
   padding: 1rem 0;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 2px 0;
   border-color: $border-color;
+  border-style: solid;
   font-size: 1.6rem;
+}
+.input {
+  &__style {
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border-width: 0 0 2px 0;
+      border-color: $point-color;
+    }
+  }
 }
 select::-ms-expand {
   display: none;
@@ -85,16 +97,39 @@ select {
   background: url(../images/icon/icon_arrow_white.png) top 50% right 1rem
     no-repeat;
   background-size: 16px 16px;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 2px 0;
   border-color: $border-color;
   border-radius: 0;
   font-size: 1.6rem;
+}
+textarea {
+  padding: 1.4rem;
+  width: 100%;
+  border-color: $border-color;
+  resize: none;
+  font-family: $font-content;
+}
+.textarea {
+  &__style {
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border-width: 0 0 2px 0;
+      border-color: $point-color;
+    }
+  }
+}
+::placeholder {
+  color: #bbb;
+  font-size: 1.4rem;
+  font-weight: 300 !important;
 }
 
 /* slide
 ========================================================================== */
 .slide {
   position: relative;
+  margin-right: -2rem;
   padding-right: 2rem;
   &__item {
     width: 90%;
@@ -107,7 +142,7 @@ select {
     max-height: 40rem;
   }
   &__text-box {
-    padding: 2rem 0;
+    padding: 1.4rem 0;
     text-align: left;
   }
   &__title {
@@ -125,10 +160,10 @@ select {
     }
   }
   &__scrollbar {
-    height: 0.5rem;
-    margin: 2rem 2rem 0 0;
+    height: 0.4rem;
+    margin-top: 2rem;
     .swiper-scrollbar-drag {
-      background: #000;
+      background: $point-color;
     }
   }
 }
@@ -138,7 +173,7 @@ select {
 .accordion {
   &__item {
     position: relative;
-    border-bottom: 1px solid rgb(0 0 0 / 8%);
+    border-bottom: 1px solid #e0e0e0;
     cursor: pointer;
   }
   &__item.active {
@@ -330,9 +365,11 @@ select {
   padding: 6rem 0;
   overflow: hidden;
   text-align: center;
+  &__content {
+    padding: 0 2rem;
+  }
   &__slide {
     position: relative;
-    margin-left: 2rem;
     .skip-navigation {
       right: 2rem;
     }
@@ -347,6 +384,10 @@ select {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.6;
+  }
+  &__btn {
+    @include btn-default;
+    @include btn-point;
   }
 }
 
@@ -368,9 +409,6 @@ select {
 .rank {
   &__section {
     @include black-bg-content;
-  }
-  &__content {
-    padding: 0 2rem;
   }
   &__top {
     margin-bottom: 2rem;
@@ -395,6 +433,10 @@ select {
     &.active {
       display: block;
     }
+  }
+  &__content {
+    margin-top: -10rem;
+    padding-top: 10rem;
   }
   &__list {
     padding: 1rem 0;
@@ -478,6 +520,36 @@ select {
         }
       }
     }
+  }
+}
+
+/* Contact
+========================================================================== */
+.contact {
+  &__section {
+    @include white-bg-content;
+  }
+  &__form-wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  &__form {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  &__input {
+    height: 4.2rem;
+  }
+  &__textarea {
+    padding: 1.4rem 0;
+    border-width: 0 0 2px 0;
+    height: 9rem;
   }
 }
 
