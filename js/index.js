@@ -158,3 +158,26 @@ window.initMap = () => {
     zoom: 8,
   });
 };
+
+/**
+ * 스크롤 방향에 따라 탑 버튼 숨기기
+ */
+const topBtn = document.querySelector(".top-btn");
+// 이전 스크롤 위치
+let lastScrollY = 0;
+// 스크롤 이벤트
+window.addEventListener("scroll", (e) => {
+  // 현재 스크롤 위치(스크롤을 했을 경우 위치)
+  let currentScrollY = window.scrollY;
+
+  // 이전 스크롤 위치가 현재 스크롤 위치보다 작을 경우 (스크롤 DOWN)
+  if (lastScrollY < currentScrollY) {
+    topBtn.classList.remove("hidden");
+    // 이전 스크롤 위치가 현재 스크롤 위치보다 클 경우 (스크롤 UP)
+  } else {
+    topBtn.classList.add("hidden");
+  }
+
+  // 이전 스크롤 위치에 현재 스크롤 위치 저장
+  lastScrollY = currentScrollY;
+});
