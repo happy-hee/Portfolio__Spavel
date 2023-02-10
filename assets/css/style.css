@@ -238,12 +238,13 @@ textarea {
 /* HEADER
 ========================================================================== */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;
+  background: #000;
   z-index: 2;
 }
 .header__inner {
@@ -253,34 +254,48 @@ textarea {
   padding: 0 2rem;
   margin: 0 auto;
 }
+.header__logo {
+  font-size: 0;
+}
 .header__gnb {
+  position: fixed;
+  top: 5.8rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
   display: none;
 }
 
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  padding: 3rem;
-  bottom: 0;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #f6f7f9;
-  z-index: 100;
-  transition: all 0.2s ease-in-out;
+.gnb {
+  height: 29.1rem;
+  background-color: #000;
+  color: #fff;
 }
-.side-menu--open {
-  left: 0;
-  transition: left 0.2s ease-in-out;
-}
-.side-menu__btn {
-  display: inline-block;
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.side-menu__btn-img {
+.gnb__btn img {
   width: 100%;
   height: 100%;
+}
+.gnb--open {
+  display: block;
+}
+.gnb__open-btn {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.gnb__close-btn {
+  display: none;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.gnb__item.active {
+  background-color: #0739d2;
+}
+.gnb__link {
+  display: block;
+  padding: 1.4rem 2rem;
 }
 
 /* Main Visual
@@ -587,18 +602,18 @@ textarea {
   font-weight: 500;
   color: #ddd;
 }
-.footer__nav-list {
+.footer__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.footer__nav-item {
+.footer__item {
   padding-right: 2rem;
   padding-bottom: 1rem;
   color: #bbb;
   font-size: 1.4rem;
 }
-.footer__nav-item:last-child {
+.footer__item:last-child {
   padding-right: 0;
 }
 .footer__copyright {

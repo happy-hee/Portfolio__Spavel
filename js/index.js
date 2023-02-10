@@ -181,3 +181,50 @@ window.addEventListener("scroll", (e) => {
   // 이전 스크롤 위치에 현재 스크롤 위치 저장
   lastScrollY = currentScrollY;
 });
+
+/**
+ * 모바일 GNB 열기/닫기
+ */
+const headerGnb = document.querySelector(".header__gnb");
+const gnbOpenBtn = document.querySelector(".gnb__open-btn");
+const gnbCloseBtn = document.querySelector(".gnb__close-btn");
+
+//사이드메뉴 열기
+gnbOpenBtn.addEventListener("click", () => {
+  headerGnb.classList.add("gnb--open");
+  gnbOpenBtn.style.display = "none";
+  gnbCloseBtn.style.display = "block";
+});
+
+//사이드메뉴 닫기
+gnbCloseBtn.addEventListener("click", () => {
+  headerGnb.classList.remove("gnb--open");
+  gnbOpenBtn.style.display = "block";
+  gnbCloseBtn.style.display = "none";
+});
+
+/**
+ * GNB 클릭시 해당 섹션으로 이동
+ */
+const sections = document.querySelectorAll("section");
+const gnbItems = document.querySelectorAll(".gnb__item");
+const footerNavItems = document.querySelectorAll(".footer__nav-item");
+
+const clickToSection = function (navItems) {
+  navItems.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
+      const sectionTop = sections[index].offsetTop - 58;
+      window.scroll({ top: sectionTop, behavior: "smooth" });
+
+      navItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      navItems[index].classList.add("active");
+    });
+  });
+};
+
+clickToSection(footerNavItems);
+clickToSection(gnbItems);
