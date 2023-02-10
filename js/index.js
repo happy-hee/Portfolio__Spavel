@@ -206,25 +206,43 @@ gnbCloseBtn.addEventListener("click", () => {
 /**
  * GNB 클릭시 해당 섹션으로 이동
  */
-const sections = document.querySelectorAll("section");
-const gnbItems = document.querySelectorAll(".gnb__item");
-const footerNavItems = document.querySelectorAll(".footer__nav-item");
-
 const clickToSection = function (navItems) {
+  const sections = document.querySelectorAll("section");
   navItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
       e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
       const sectionTop = sections[index].offsetTop - 58;
       window.scroll({ top: sectionTop, behavior: "smooth" });
-
-      navItems.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      navItems[index].classList.add("active");
     });
   });
 };
 
-clickToSection(footerNavItems);
+const gnbItems = document.querySelectorAll(".gnb__item");
+const footerNavItems = document.querySelectorAll(".footer__nav-item");
+// GNB에 섹션 이동
 clickToSection(gnbItems);
+// Footer 네비게이션에 섹션 이동
+clickToSection(footerNavItems);
+
+/**
+ * GNB 스크롤 스파이
+ */
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const gnbItems = document.querySelectorAll(".gnb__item");
+
+  sections.forEach((section, index) => {
+    const top = window.scrollY; //스크롤 위치
+    const sectionTop = section.offsetTop - 58; //섹션 상단 스크롤 위치
+    const sectionHeight = section.offsetHeight; //섹션 높이값
+
+    gnbItems.forEach((gnbItem) => {
+      // 스크롤 위치가 섹션 상단 스크롤 위치보다 크고 && 섹션높이값보다 작을 경우
+      if (top >= sectionTop && top < sectionTop + sectionHeight) {
+        gnbItem.classList.remove("active");
+        // 해당 index 메뉴의 클래스에 active 클래스명을 추가
+        gnbItems[index].classList.add("active");
+      }
+    });
+  });
+});
