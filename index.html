@@ -140,120 +140,140 @@
 
     <!-- Planet -->
     <section class="section planet__section" id="planetSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">Planet info</h2>
-      </div>
-      <!-- 슬라이드 -->
-      <div class="section__content section__slide">
-        <div class="swiper slide planetSlide">
-          <div class="swiper-wrapper slide__wrapper">
-            <!-- Saturn -->
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_saturn.jpg"
-                alt="Saturn" />
-              <div class="slide__text-box">
-                <div class="slide__title">Saturn</div>
-                <div class="slide__content">
-                  <p>
-                    Suspendisse ligula justo, placerat a mauris nec, aliquam
-                    dictum nisl. Nunc imperdiet nec velit a vulputate.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_neptune.jpg"
-                alt="Neptune" />
-              <div class="slide__text-box">
-                <div class="slide__title">Neptune</div>
-                <div class="slide__content">
-                  <p>
-                    Nullam vulputate vehicula pulvinar. Integer pellentesque
-                    commodo semper. Quisque tincidunt sodales ultricies.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_uranus.jpg"
-                alt="Uranus" />
-              <div class="slide__text-box">
-                <div class="slide__title">Uranus</div>
-                <div class="slide__content">
-                  <p>
-                    Nullam sollicitudin sapien et congue elementum. Praesent id
-                    lectus viverra, blandit orci id, viverra velit.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_moon.jpg"
-                alt="Moon" />
-              <div class="slide__text-box">
-                <div class="slide__title">Moon</div>
-                <div class="slide__content">
-                  <p>
-                    Donec blandit et odio vel facilisis. Morbi ut dui eu ipsum
-                    interdum feugiat. Sed varius ullamcorper nisi sit amet
-                    semper.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_galaxy.jpg"
-                alt="Galaxy" />
-              <div class="slide__text-box">
-                <div class="slide__title">Galaxy</div>
-                <div class="slide__content">
-                  <p>
-                    Pellentesque vestibulum leo eget neque vulputate, vel
-                    imperdiet est vulputate. Praesent nec porta urna.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide__scrollbar"></div>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Planet info</h2>
         </div>
-
-        <!-- (웹접근성) Skip navigation -->
-        <div class="skip-navigation">
-          <div
-            class="skip-navigation__btn skip-navigation__btn--prev"
-            id="skipNavPrev">
-            Prev Slide
+        <!-- 슬라이드 -->
+        <div class="section__slide">
+          <!-- 슬라이드 상단 -->
+          <div class="planet__top">
+            <div class="planet__navigation">
+              <div
+                class="planet__navigation-btn planet__navigation-btn--rotate"
+                id="slideNavPrev">
+                <img
+                  src="./assets/images/icon/icon_arrow_long.png"
+                  alt="Prev Slide" />
+              </div>
+              <div class="planet__navigation-btn" id="slideNavNext">
+                <img
+                  src="./assets/images/icon/icon_arrow_long.png"
+                  alt="Next Slide" />
+              </div>
+            </div>
           </div>
-          <div
-            class="skip-navigation__btn skip-navigation__btn--next"
-            id="skipNavNext">
-            Next Slide
+
+          <div class="swiper slide planetSlide">
+            <div class="swiper-wrapper slide__wrapper">
+              <!-- Saturn -->
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_saturn.jpg"
+                  alt="Saturn" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Saturn</div>
+                  <div class="slide__content">
+                    <p>
+                      Suspendisse ligula justo, placerat a mauris nec, aliquam
+                      dictum nisl. Nunc imperdiet nec velit a vulputate.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_neptune.jpg"
+                  alt="Neptune" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Neptune</div>
+                  <div class="slide__content">
+                    <p>
+                      Nullam vulputate vehicula pulvinar. Integer pellentesque
+                      commodo semper. Quisque tincidunt sodales ultricies.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_uranus.jpg"
+                  alt="Uranus" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Uranus</div>
+                  <div class="slide__content">
+                    <p>
+                      Nullam sollicitudin sapien et congue elementum. Praesent
+                      id lectus viverra, blandit orci id, viverra velit.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_moon.jpg"
+                  alt="Moon" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Moon</div>
+                  <div class="slide__content">
+                    <p>
+                      Donec blandit et odio vel facilisis. Morbi ut dui eu ipsum
+                      interdum feugiat. Sed varius ullamcorper nisi sit amet
+                      semper.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_galaxy.jpg"
+                  alt="Galaxy" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Galaxy</div>
+                  <div class="slide__content">
+                    <p>
+                      Pellentesque vestibulum leo eget neque vulputate, vel
+                      imperdiet est vulputate. Praesent nec porta urna.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide__scrollbar"></div>
+          </div>
+
+          <!-- (웹접근성) Skip navigation -->
+          <div class="skip-navigation">
+            <div
+              class="skip-navigation__btn skip-navigation__btn--prev"
+              id="slideNavPrev">
+              Prev Slide
+            </div>
+            <div
+              class="skip-navigation__btn skip-navigation__btn--next"
+              id="slideNavNext">
+              Next Slide
+            </div>
           </div>
         </div>
       </div>

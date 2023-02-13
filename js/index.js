@@ -12,8 +12,8 @@ const planetSwiper = new Swiper(planetSlide, {
   watchOverflow: true, //마우스 클릭으로 슬라이드 이동
   // 네비게이션
   navigation: {
-    prevEl: "#skipNavPrev",
-    nextEl: "#skipNavNext",
+    prevEl: "#slideNavPrev",
+    nextEl: "#slideNavNext",
   },
   // 스크롤바
   scrollbar: {

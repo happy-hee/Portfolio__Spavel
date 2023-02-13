@@ -64,6 +64,12 @@ button {
   cursor: pointer;
 }
 
+.res-inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 /* input & selectbox & textarea
 ========================================================================== */
 input {
@@ -147,8 +153,9 @@ textarea {
   }
   &__title {
     margin-bottom: 1rem;
+    font-family: $font-title;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 700;
   }
   &__content {
     font-size: 1.6rem;
@@ -166,6 +173,9 @@ textarea {
       background: $point-color;
     }
   }
+}
+.swiper-button-disabled {
+  visibility: hidden;
 }
 
 /* Accordion menu
@@ -234,7 +244,7 @@ textarea {
   &__text {
     display: block;
     margin-left: 0.6rem;
-    font-family: $font-title-en;
+    font-family: $font-title;
     font-size: 2.4rem;
     font-weight: 700;
     color: #fff;
@@ -332,7 +342,7 @@ textarea {
     top: 50%;
     transform: translateY(-45%);
     left: 2rem;
-    font-family: $font-title-en;
+    font-family: $font-title;
     &--main {
       font-size: 4rem;
       font-weight: 700;
@@ -405,7 +415,7 @@ textarea {
   }
   &__title {
     position: relative;
-    font-family: $font-title-en;
+    font-family: $font-title;
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.6;
@@ -426,6 +436,9 @@ textarea {
         font-size: 2.6rem;
       }
     }
+  }
+  &__top {
+    display: none;
   }
 }
 
@@ -727,16 +740,14 @@ textarea {
 /* Large Tablet */
 @media (min-width: 1024px) {
   .res-inner {
-    position: relative;
     max-width: $desktop-size;
     height: 100%;
-    margin: 0 auto;
   }
   /* HEADER */
   .header {
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     &.scrolled {
-      padding: 0 4rem;
+      padding: 0 2rem;
       .header__gnb {
         top: 0;
       }
@@ -804,7 +815,7 @@ textarea {
   /* Reserve */
   .reserve {
     &__section {
-      padding: 2rem;
+      padding: 2rem 0;
     }
     &__row-wrap {
       display: flex;
@@ -839,6 +850,92 @@ textarea {
       width: 15rem;
       height: 4.3rem;
     }
+  }
+
+  /* Section */
+  .section {
+    padding: 14rem 0;
+    &__title {
+      margin-bottom: 5rem;
+      font-size: 6rem;
+      letter-spacing: -0.2rem;
+      line-height: 6rem;
+    }
+  }
+
+  /* Planet */
+  .slide {
+    overflow: visible;
+  }
+  .planet {
+    &__section {
+      .slide {
+        padding: 3rem 0 0 0;
+        margin: 0;
+        &__img {
+          width: 50%;
+          height: 50rem;
+          max-height: none;
+          box-shadow: 15px 15px 0px 0px #e9e9e9;
+        }
+        &__item {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        &__text-box {
+          padding: 5rem;
+        }
+        &__title {
+          margin-bottom: 2rem;
+          font-size: 3.6rem;
+          &::after {
+            display: block;
+            content: "";
+            background-color: #e50000;
+            width: 6rem;
+            height: 4px;
+            margin-top: 2rem;
+          }
+        }
+        &__content {
+          padding: 0;
+          font-size: 1.8rem;
+          &--sub {
+            font-size: 1.8rem;
+            margin-top: 6rem;
+          }
+        }
+        &__scrollbar {
+          margin-top: 6rem;
+        }
+      }
+    }
+    &__top {
+      display: block;
+    }
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      &-btn {
+        width: 6rem;
+        cursor: pointer;
+        &--rotate {
+          rotate: 180deg;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* 웹 접근성 */
+  .skip-navigation {
+    display: none;
   }
 }
 
