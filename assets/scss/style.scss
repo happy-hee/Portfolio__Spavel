@@ -1036,6 +1036,11 @@ textarea {
       }
     }
   }
+  .map {
+    &__section {
+      height: 60rem;
+    }
+  }
 }
 
 /* Desctop */

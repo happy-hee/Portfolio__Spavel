@@ -172,9 +172,16 @@ const submitContact = () => {
  * 구글 지도
  */
 window.initMap = () => {
+  // 지도 위치
+  const korea = { lat: 37.56, lng: 127 };
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+    zoom: 6,
+    center: korea,
+  });
+  // 마커
+  const marker = new google.maps.Marker({
+    position: korea,
+    map: map,
   });
 };
 

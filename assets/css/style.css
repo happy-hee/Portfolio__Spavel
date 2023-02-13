@@ -989,6 +989,9 @@ textarea::placeholder {
   .news__section .slide__scrollbar {
     margin-top: 3rem;
   }
+  .map__section {
+    height: 60rem;
+  }
 }
 /* Desctop */
 @media (min-width: 1280px) {
