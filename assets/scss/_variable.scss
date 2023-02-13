@@ -5,7 +5,7 @@ $font-title-en: "Poppins", sans-serif;
 $font-content: "Noto Sans KR", sans-serif;
 
 /* Color */
-$point-color: #0739d2;
+$point-color: #e50000;
 $border-color: #e0e0e0;
 
 @mixin black-bg-content {
@@ -49,3 +49,9 @@ $border-color: #e0e0e0;
   background-color: $point-color;
   color: #fff;
 }
+
+/* Size */
+$tablet-size: 768px;
+$large-tablet-size: 1024px;
+$desktop-size: 1280px;
+$wide-desktop-size: 1440px;

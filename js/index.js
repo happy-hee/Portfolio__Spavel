@@ -48,6 +48,7 @@ const planetSwiper = new Swiper(planetSlide, {
   loop: false,
   clickable: true,
   allowTouchMove: true,
+  watchOverflow: true, //마우스 클릭으로 슬라이드 이동
   // 네비게이션
   navigation: {
     prevEl: ".skip-navigation__btn--prev",
@@ -211,7 +212,7 @@ const clickToSection = function (navItems) {
   navItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
       e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
-      const sectionTop = sections[index].offsetTop - 58;
+      const sectionTop = sections[index].offsetTop - 50;
       window.scroll({ top: sectionTop, behavior: "smooth" });
     });
   });
@@ -233,7 +234,7 @@ window.addEventListener("scroll", () => {
 
   sections.forEach((section, index) => {
     const top = window.scrollY; //스크롤 위치
-    const sectionTop = section.offsetTop - 58; //섹션 상단 스크롤 위치
+    const sectionTop = section.offsetTop - 50; //섹션 상단 스크롤 위치
     const sectionHeight = section.offsetHeight; //섹션 높이값
 
     gnbItems.forEach((gnbItem) => {
@@ -245,4 +246,15 @@ window.addEventListener("scroll", () => {
       }
     });
   });
+});
+
+/**
+ * GNB 스크롤 내릴시 스타일 변경
+ */
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 71) {
+    document.querySelector(".header").classList.add("scrolled");
+  } else {
+    document.querySelector(".header").classList.remove("scrolled");
+  }
 });

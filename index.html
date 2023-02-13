@@ -22,228 +22,236 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__inner res-inner">
-        <!-- 로고 -->
-        <h1 class="header__logo">
-          <span class="logo">
-            <a class="logo__link" href="./index.html">
-              <img
-                class="logo__icon"
-                src="./assets/images/logo.svg"
-                alt="logo" />
-              <span class="logo__text">SPAVEL</span>
-            </a>
-          </span>
-        </h1>
+      <div class="res-inner">
+        <div class="header__inner">
+          <!-- 로고 -->
+          <h1 class="header__logo">
+            <span class="logo">
+              <a class="logo__link" href="./index.html">
+                <img
+                  class="logo__icon"
+                  src="./assets/images/logo.svg"
+                  alt="logo" />
+                <span class="logo__text">SPAVEL</span>
+              </a>
+            </span>
+          </h1>
 
-        <button class="gnb__btn gnb__open-btn" type="button">
-          <img
-            class="gnb__btn-img"
-            src="./assets/images/icon/icon_burger.png"
-            alt="menu open" />
-        </button>
+          <button class="gnb__btn gnb__open-btn" type="button">
+            <img
+              class="gnb__btn-img"
+              src="./assets/images/icon/icon_burger.png"
+              alt="menu open" />
+          </button>
 
-        <button class="gnb__btn gnb__close-btn" type="button">
-          <img
-            class="gnb__btn-img"
-            src="./assets/images/icon/icon_close.png"
-            alt="menu close" />
-        </button>
-      </div>
+          <button class="gnb__btn gnb__close-btn" type="button">
+            <img
+              class="gnb__btn-img"
+              src="./assets/images/icon/icon_close.png"
+              alt="menu close" />
+          </button>
+        </div>
 
-      <!-- GNB -->
-      <div class="header__gnb">
-        <nav class="gnb">
-          <ul class="gnb__list">
-            <li class="gnb__item">
-              <a class="gnb__link" href="#reserveSection">Reserve</a>
-            </li>
-            <li class="gnb__item">
-              <a class="gnb__link" href="#planetSection">Planet</a>
-            </li>
-            <li class="gnb__item">
-              <a class="gnb__link" href="#rankSection">Rank</a>
-            </li>
-            <li class="gnb__item">
-              <a class="gnb__link" href="#faqSection">Faq</a>
-            </li>
-            <li class="gnb__item">
-              <a class="gnb__link" href="#newsSection">News</a>
-            </li>
-            <li class="gnb__item">
-              <a class="gnb__link" href="#contactSection">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <!-- GNB -->
+        <div class="header__gnb">
+          <nav class="gnb">
+            <ul class="gnb__list">
+              <li class="gnb__item">
+                <a class="gnb__link" href="#reserveSection">Reserve</a>
+              </li>
+              <li class="gnb__item">
+                <a class="gnb__link" href="#planetSection">Planet</a>
+              </li>
+              <li class="gnb__item">
+                <a class="gnb__link" href="#rankSection">Rank</a>
+              </li>
+              <li class="gnb__item">
+                <a class="gnb__link" href="#faqSection">Faq</a>
+              </li>
+              <li class="gnb__item">
+                <a class="gnb__link" href="#newsSection">News</a>
+              </li>
+              <li class="gnb__item">
+                <a class="gnb__link" href="#contactSection">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <!-- Main Visual -->
     <div class="main-visual" id="mainVisual">
-      <div class="main-visual__title">
-        <p class="main-visual__title--main">WE ARE SPAVEL</p>
-        <p class="main-visual__title--sub">Let's go space with spavel !</p>
-        <p class="main-visual__title--sub">we are waiting for you</p>
+      <div class="res-inner">
+        <div class="main-visual__title">
+          <p class="main-visual__title--main">WE ARE SPAVEL</p>
+          <p class="main-visual__title--sub">Let's go space with spavel !</p>
+          <p class="main-visual__title--sub">we are waiting for you</p>
+        </div>
       </div>
     </div>
 
     <!-- Reserve -->
     <section class="reserve__section" id="reserveSection">
-      <h2 class="sr-only">Reserve</h2>
-      <!-- Checkin / Checkout -->
-      <div class="reserve__row">
-        <div class="reserve__item">
-          <label for="checkinInput" class="reserve__title">Checkin</label>
-          <div class="reserve__date">
-            <input class="reserve__input" type="text" name="checkinInput" />
+      <div class="res-inner">
+        <h2 class="sr-only">Reserve</h2>
+        <!-- Checkin / Checkout -->
+        <div class="reserve__row">
+          <div class="reserve__item">
+            <label for="checkinInput" class="reserve__title">Checkin</label>
+            <div class="reserve__date">
+              <input class="reserve__input" type="text" name="checkinInput" />
+            </div>
+          </div>
+          <div class="reserve__item">
+            <label for="checkoutInput" class="reserve__title">Checkout</label>
+            <div class="reserve__date">
+              <input class="reserve__input" type="text" name="checkoutInput" />
+            </div>
           </div>
         </div>
-        <div class="reserve__item">
-          <label for="checkoutInput" class="reserve__title">Checkout</label>
-          <div class="reserve__date">
-            <input class="reserve__input" type="text" name="checkoutInput" />
+        <!-- Planet / Guests -->
+        <div class="reserve__row">
+          <div class="reserve__item reserve__item--inline">
+            <label class="reserve__title" for="planet">Planet</label>
+            <select class="reserve__select" name="planet" id="planet">
+              <option value="Saturn">Saturn</option>
+              <option value="Neptune">Neptune</option>
+              <option value="Moon">Moon</option>
+              <option value="Uranus">Uranus</option>
+              <option value="Galaxy">Galaxy</option>
+            </select>
+          </div>
+          <div class="reserve__item reserve__item--inline">
+            <label class="reserve__title" for="guests">Guests</label>
+            <select class="reserve__select" name="guests" id="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
         </div>
-      </div>
-      <!-- Planet / Guests -->
-      <div class="reserve__row">
-        <div class="reserve__item reserve__item--inline">
-          <label class="reserve__title" for="planet">Planet</label>
-          <select class="reserve__select" name="planet" id="planet">
-            <option value="Saturn">Saturn</option>
-            <option value="Neptune">Neptune</option>
-            <option value="Moon">Moon</option>
-            <option value="Uranus">Uranus</option>
-            <option value="Galaxy">Galaxy</option>
-          </select>
-        </div>
-        <div class="reserve__item reserve__item--inline">
-          <label class="reserve__title" for="guests">Guests</label>
-          <select class="reserve__select" name="guests" id="guests">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-      </div>
 
-      <button class="reserve__btn" type="button">Reserve</button>
+        <button class="reserve__btn" type="button">Reserve</button>
+      </div>
     </section>
 
     <!-- Planet -->
     <section class="section planet__section" id="planetSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">Planet info</h2>
-      </div>
-      <!-- 슬라이드 -->
-      <div class="section__content section__slide">
-        <div class="swiper slide planetSlide">
-          <div class="swiper-wrapper slide__wrapper">
-            <!-- Saturn -->
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_saturn.jpg"
-                alt="Saturn" />
-              <div class="slide__text-box">
-                <div class="slide__title">Saturn</div>
-                <div class="slide__content">
-                  <p>
-                    Suspendisse ligula justo, placerat a mauris nec, aliquam
-                    dictum nisl. Nunc imperdiet nec velit a vulputate.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_neptune.jpg"
-                alt="Neptune" />
-              <div class="slide__text-box">
-                <div class="slide__title">Neptune</div>
-                <div class="slide__content">
-                  <p>
-                    Nullam vulputate vehicula pulvinar. Integer pellentesque
-                    commodo semper. Quisque tincidunt sodales ultricies.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_uranus.jpg"
-                alt="Uranus" />
-              <div class="slide__text-box">
-                <div class="slide__title">Uranus</div>
-                <div class="slide__content">
-                  <p>
-                    Nullam sollicitudin sapien et congue elementum. Praesent id
-                    lectus viverra, blandit orci id, viverra velit.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_moon.jpg"
-                alt="Moon" />
-              <div class="slide__text-box">
-                <div class="slide__title">Moon</div>
-                <div class="slide__content">
-                  <p>
-                    Donec blandit et odio vel facilisis. Morbi ut dui eu ipsum
-                    interdum feugiat. Sed varius ullamcorper nisi sit amet
-                    semper.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide slide__item" tabindex="0">
-              <img
-                class="slide__img"
-                src="./assets/images/planet/planet_galaxy.jpg"
-                alt="Galaxy" />
-              <div class="slide__text-box">
-                <div class="slide__title">Galaxy</div>
-                <div class="slide__content">
-                  <p>
-                    Pellentesque vestibulum leo eget neque vulputate, vel
-                    imperdiet est vulputate. Praesent nec porta urna.
-                  </p>
-                  <p class="slide__content--sub">
-                    2023 - 03 - 01 ~ 2024 - 03 - 01
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide__scrollbar"></div>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Planet info</h2>
         </div>
-
-        <!-- (웹접근성) Skip navigation -->
-        <div class="skip-navigation">
-          <div class="skip-navigation__btn skip-navigation__btn--prev">
-            Prev Slide
+        <!-- 슬라이드 -->
+        <div class="section__content section__slide">
+          <div class="swiper slide planetSlide">
+            <div class="swiper-wrapper slide__wrapper">
+              <!-- Saturn -->
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_saturn.jpg"
+                  alt="Saturn" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Saturn</div>
+                  <div class="slide__content">
+                    <p>
+                      Suspendisse ligula justo, placerat a mauris nec, aliquam
+                      dictum nisl. Nunc imperdiet nec velit a vulputate.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_neptune.jpg"
+                  alt="Neptune" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Neptune</div>
+                  <div class="slide__content">
+                    <p>
+                      Nullam vulputate vehicula pulvinar. Integer pellentesque
+                      commodo semper. Quisque tincidunt sodales ultricies.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_uranus.jpg"
+                  alt="Uranus" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Uranus</div>
+                  <div class="slide__content">
+                    <p>
+                      Nullam sollicitudin sapien et congue elementum. Praesent
+                      id lectus viverra, blandit orci id, viverra velit.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_moon.jpg"
+                  alt="Moon" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Moon</div>
+                  <div class="slide__content">
+                    <p>
+                      Donec blandit et odio vel facilisis. Morbi ut dui eu ipsum
+                      interdum feugiat. Sed varius ullamcorper nisi sit amet
+                      semper.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide__item" tabindex="0">
+                <img
+                  class="slide__img"
+                  src="./assets/images/planet/planet_galaxy.jpg"
+                  alt="Galaxy" />
+                <div class="slide__text-box">
+                  <div class="slide__title">Galaxy</div>
+                  <div class="slide__content">
+                    <p>
+                      Pellentesque vestibulum leo eget neque vulputate, vel
+                      imperdiet est vulputate. Praesent nec porta urna.
+                    </p>
+                    <p class="slide__content--sub">
+                      2023 - 03 - 01 ~ 2024 - 03 - 01
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide__scrollbar"></div>
           </div>
-          <div class="skip-navigation__btn skip-navigation__btn--next">
-            Next Slide
+
+          <!-- (웹접근성) Skip navigation -->
+          <div class="skip-navigation">
+            <div class="skip-navigation__btn skip-navigation__btn--prev">
+              Prev Slide
+            </div>
+            <div class="skip-navigation__btn skip-navigation__btn--next">
+              Next Slide
+            </div>
           </div>
         </div>
       </div>
@@ -251,326 +259,328 @@
 
     <!-- Rank -->
     <section class="section rank__section" id="rankSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">Planet rank</h2>
-      </div>
-      <div class="section__content">
-        <!-- 탭메뉴 -->
-        <div class="rank__top">
-          <ul class="rank__tab">
-            <li class="rank__tab-item active">
-              <a href="#rank__popular">Popular</a>
-            </li>
-            <li class="rank__tab-item">
-              <a href="#rank__reserved">Most Reserved</a>
-            </li>
-            <li class="rank__tab-item">
-              <a href="#rank__view">Most view</a>
-            </li>
-          </ul>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Planet rank</h2>
         </div>
+        <div class="section__content">
+          <!-- 탭메뉴 -->
+          <div class="rank__top">
+            <ul class="rank__tab">
+              <li class="rank__tab-item active">
+                <a href="#rank__popular">Popular</a>
+              </li>
+              <li class="rank__tab-item">
+                <a href="#rank__reserved">Most Reserved</a>
+              </li>
+              <li class="rank__tab-item">
+                <a href="#rank__view">Most view</a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- 탭내용 -->
-        <div class="rank__content">
-          <!-- Popular -->
-          <div id="rank__popular" class="rank__tab-content active">
-            <ul class="rank___list-wrapper">
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">1</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_saturn.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Saturn</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">2</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_neptune.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Neptune</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">3</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_uranus.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Uranus</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">4</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_moon.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Moon</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">5</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_galaxy.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Galaxy</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Most Reserved -->
-          <div id="rank__reserved" class="rank__tab-content">
-            <ul class="rank___list-wrapper">
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">1</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_uranus.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Uranus</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">2</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_neptune.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Neptune</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">3</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_moon.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Moon</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">4</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_galaxy.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Galaxy</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">5</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_saturn.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Saturn</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Most View -->
-          <div id="rank__view" class="rank__tab-content">
-            <ul class="rank___list-wrapper">
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">1</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_galaxy.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Galaxy</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">2</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_moon.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Moon</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">3</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_neptune.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Neptune</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">4</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_uranus.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Uranus</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="rank__list">
-                <a class="rank__link" href="./index.html">
-                  <div class="rank__img-wrapper">
-                    <span class="rank__number">5</span>
-                    <img
-                      class="rank__img"
-                      src="./assets/images/planet/planet_saturn.jpg"
-                      alt="" />
-                  </div>
-                  <div class="rank__info-wrapper">
-                    <p class="rank__name">Saturn</p>
-                    <p class="rank__info">
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl.
-                    </p>
-                    <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+          <!-- 탭내용 -->
+          <div class="rank__content">
+            <!-- Popular -->
+            <div id="rank__popular" class="rank__tab-content active">
+              <ul class="rank___list-wrapper">
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">1</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_saturn.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Saturn</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">2</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_neptune.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Neptune</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">3</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_uranus.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Uranus</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">4</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_moon.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Moon</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">5</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_galaxy.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Galaxy</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Most Reserved -->
+            <div id="rank__reserved" class="rank__tab-content">
+              <ul class="rank___list-wrapper">
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">1</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_uranus.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Uranus</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">2</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_neptune.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Neptune</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">3</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_moon.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Moon</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">4</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_galaxy.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Galaxy</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">5</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_saturn.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Saturn</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Most View -->
+            <div id="rank__view" class="rank__tab-content">
+              <ul class="rank___list-wrapper">
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">1</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_galaxy.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Galaxy</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">2</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_moon.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Moon</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">3</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_neptune.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Neptune</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">4</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_uranus.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Uranus</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="rank__list">
+                  <a class="rank__link" href="./index.html">
+                    <div class="rank__img-wrapper">
+                      <span class="rank__number">5</span>
+                      <img
+                        class="rank__img"
+                        src="./assets/images/planet/planet_saturn.jpg"
+                        alt="" />
+                    </div>
+                    <div class="rank__info-wrapper">
+                      <p class="rank__name">Saturn</p>
+                      <p class="rank__info">
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl.
+                      </p>
+                      <p class="rank__date">2023 - 03 - 01 ~ 2024 - 03 - 01</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -578,194 +588,203 @@
 
     <!-- Faq -->
     <section class="section faq__section" id="faqSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">
-          Frequently <br />
-          asked questions
-        </h2>
-      </div>
-      <div class="section__content">
-        <ul class="accordion__menu">
-          <li class="accordion__item accordionItem" tabindex="0">
-            <div class="accordion__top">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-            <p class="accordion__body">Frequently asked questions Content</p>
-          </li>
-          <li class="accordion__item accordionItem" tabindex="0">
-            <div class="accordion__top">
-              <p>In dictum auctor arcu, et bibendum mi consectetur ut</p>
-            </div>
-            <p class="accordion__body">Frequently asked questions Content</p>
-          </li>
-          <li class="accordion__item accordionItem" tabindex="0">
-            <div class="accordion__top">
-              <p>Vestibulum in mi rhoncus purus venenatis sodales</p>
-            </div>
-            <p class="accordion__body">Frequently asked questions Content</p>
-          </li>
-          <li class="accordion__item accordionItem" tabindex="0">
-            <div class="accordion__top">
-              <p>Praesent non dui sit amet erat ultricies bibendum</p>
-            </div>
-            <p class="accordion__body">Frequently asked questions Content</p>
-          </li>
-          <li class="accordion__item accordionItem" tabindex="0">
-            <div class="accordion__top">
-              <p>
-                Ut tellus nibh, molestie efficitur velit et, vulputate interdum
-                ligula
-              </p>
-            </div>
-            <p class="accordion__body">Frequently asked questions Content</p>
-          </li>
-        </ul>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">
+            Frequently <br />
+            asked questions
+          </h2>
+        </div>
+        <div class="section__content">
+          <ul class="accordion__menu">
+            <li class="accordion__item accordionItem" tabindex="0">
+              <div class="accordion__top">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+              <p class="accordion__body">Frequently asked questions Content</p>
+            </li>
+            <li class="accordion__item accordionItem" tabindex="0">
+              <div class="accordion__top">
+                <p>In dictum auctor arcu, et bibendum mi consectetur ut</p>
+              </div>
+              <p class="accordion__body">Frequently asked questions Content</p>
+            </li>
+            <li class="accordion__item accordionItem" tabindex="0">
+              <div class="accordion__top">
+                <p>Vestibulum in mi rhoncus purus venenatis sodales</p>
+              </div>
+              <p class="accordion__body">Frequently asked questions Content</p>
+            </li>
+            <li class="accordion__item accordionItem" tabindex="0">
+              <div class="accordion__top">
+                <p>Praesent non dui sit amet erat ultricies bibendum</p>
+              </div>
+              <p class="accordion__body">Frequently asked questions Content</p>
+            </li>
+            <li class="accordion__item accordionItem" tabindex="0">
+              <div class="accordion__top">
+                <p>
+                  Ut tellus nibh, molestie efficitur velit et, vulputate
+                  interdum ligula
+                </p>
+              </div>
+              <p class="accordion__body">Frequently asked questions Content</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- News -->
     <section class="section news__section" id="newsSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">News</h2>
-      </div>
-      <!-- 슬라이드 -->
-      <div class="section__content section__slide">
-        <div class="swiper slide newsSlide">
-          <div class="swiper-wrapper slide__wrapper">
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_1.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">News</h2>
+        </div>
+        <!-- 슬라이드 -->
+        <div class="section__content section__slide">
+          <div class="swiper slide newsSlide">
+            <div class="swiper-wrapper slide__wrapper">
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_1.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_2.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_2.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_3.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_3.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_4.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_4.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_5.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_5.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
+            <div class="slide__scrollbar"></div>
           </div>
-          <div class="slide__scrollbar"></div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="section contact__section" id="contactSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">Contact</h2>
-      </div>
-      <div class="section__content">
-        <div class="contact__form-wrapper">
-          <!-- 이름 -->
-          <div class="contact__form">
-            <label class="contact__label" for="name">Name</label>
-            <input
-              class="contact__input input__style"
-              id="name"
-              type="text"
-              placeholder="Name" />
-          </div>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Contact</h2>
+        </div>
+        <div class="section__content">
+          <div class="contact__form-wrapper">
+            <!-- 이름 -->
+            <div class="contact__form">
+              <label class="contact__label" for="name">Name</label>
+              <input
+                class="contact__input input__style"
+                id="name"
+                type="text"
+                placeholder="Name" />
+            </div>
 
-          <div class="contact__form">
-            <label class="contact__label" for="email">E-mail</label>
-            <input
-              class="contact__input input__style"
-              type="email"
-              id="email"
-              placeholder="E-mail" />
+            <div class="contact__form">
+              <label class="contact__label" for="email">E-mail</label>
+              <input
+                class="contact__input input__style"
+                type="email"
+                id="email"
+                placeholder="E-mail" />
+            </div>
+            <div class="contact__form">
+              <label class="contact__label" for="content">Message</label>
+              <textarea
+                class="contact__textarea textarea__style"
+                name="contact-content"
+                id="content"
+                cols="30"
+                rows="10"
+                placeholder="Write your message."></textarea>
+            </div>
+            <button
+              class="section__btn"
+              type="button"
+              onclick="submitContact()">
+              Submit
+            </button>
           </div>
-          <div class="contact__form">
-            <label class="contact__label" for="content">Message</label>
-            <textarea
-              class="contact__textarea textarea__style"
-              name="contact-content"
-              id="content"
-              cols="30"
-              rows="10"
-              placeholder="Write your message."></textarea>
-          </div>
-          <button class="section__btn" type="button" onclick="submitContact()">
-            Submit
-          </button>
         </div>
       </div>
     </section>
@@ -775,89 +794,97 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer__logo">
-        <span class="logo">
-          <a class="logo__link" href="./index.html">
-            <img class="logo__icon" src="./assets/images/logo.svg" alt="logo" />
-            <span class="logo__text">SPAVEL</span>
-          </a>
-        </span>
-      </div>
-      <div class="footer__info">
-        <div class="footer__column">
-          <div class="footer__title">Company</div>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="https://github.com/happy-hee" target="_blank">Github</a>
+      <div class="res-inner">
+        <div class="footer__logo">
+          <span class="logo">
+            <a class="logo__link" href="./index.html">
+              <img
+                class="logo__icon"
+                src="./assets/images/logo.svg"
+                alt="logo" />
+              <span class="logo__text">SPAVEL</span>
+            </a>
+          </span>
+        </div>
+        <div class="footer__info">
+          <div class="footer__column">
+            <div class="footer__title">Company</div>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="https://github.com/happy-hee" target="_blank"
+                  >Github</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="https://mica-arch-602.notion.site/0183e2e0b65a441fbe405e506614e9ad"
+                  target="_blank"
+                  >Notion</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="https://happy-hee8.tistory.com/" target="_blank"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <div class="footer__title">Menu</div>
+            <ul class="footer__list">
+              <li class="footer__item footer__nav-item">
+                <a href="#reserveSection">Reserve</a>
+              </li>
+              <li class="footer__item footer__nav-item">
+                <a href="#planetSection">Planet</a>
+              </li>
+              <li class="footer__item footer__nav-item">
+                <a href="#rankSection">Rank</a>
+              </li>
+              <li class="footer__item footer__nav-item">
+                <a href="#faqSection">Faq</a>
+              </li>
+              <li class="footer__item footer__nav-item">
+                <a href="#newsSection">News</a>
+              </li>
+              <li class="footer__item footer__nav-item">
+                <a href="#contactSection">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://github.com/happy-hee" target="_blank">
+                <img
+                  class="github-icon"
+                  src="./assets/images/icon/icon_github.png"
+                  alt="github" />
+              </a>
             </li>
-            <li class="footer__item">
+            <li class="social__item">
               <a
                 href="https://mica-arch-602.notion.site/0183e2e0b65a441fbe405e506614e9ad"
-                target="_blank"
-                >Notion</a
-              >
+                target="_blank">
+                <img
+                  class="notion-icon"
+                  src="./assets/images/icon/icon_notion.png"
+                  alt="notion" />
+              </a>
             </li>
-            <li class="footer__item">
-              <a href="https://happy-hee8.tistory.com/" target="_blank">Blog</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__column">
-          <div class="footer__title">Menu</div>
-          <ul class="footer__list">
-            <li class="footer__item footer__nav-item">
-              <a href="#reserveSection">Reserve</a>
-            </li>
-            <li class="footer__item footer__nav-item">
-              <a href="#planetSection">Planet</a>
-            </li>
-            <li class="footer__item footer__nav-item">
-              <a href="#rankSection">Rank</a>
-            </li>
-            <li class="footer__item footer__nav-item">
-              <a href="#faqSection">Faq</a>
-            </li>
-            <li class="footer__item footer__nav-item">
-              <a href="#newsSection">News</a>
-            </li>
-            <li class="footer__item footer__nav-item">
-              <a href="#contactSection">Contact</a>
+            <li class="social__item">
+              <a href="https://happy-hee8.tistory.com/" target="_blank">
+                <img
+                  class="tstory-icon"
+                  src="./assets/images/icon/icon_tstory.png"
+                  alt="blog" />
+              </a>
             </li>
           </ul>
         </div>
+        <p class="footer__copyright">©SPAVEL. All Rights Reserved</p>
       </div>
-      <div class="footer__social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="https://github.com/happy-hee" target="_blank">
-              <img
-                class="github-icon"
-                src="./assets/images/icon/icon_github.png"
-                alt="github" />
-            </a>
-          </li>
-          <li class="social__item">
-            <a
-              href="https://mica-arch-602.notion.site/0183e2e0b65a441fbe405e506614e9ad"
-              target="_blank">
-              <img
-                class="notion-icon"
-                src="./assets/images/icon/icon_notion.png"
-                alt="notion" />
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="https://happy-hee8.tistory.com/" target="_blank">
-              <img
-                class="tstory-icon"
-                src="./assets/images/icon/icon_tstory.png"
-                alt="blog" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <p class="footer__copyright">©SPAVEL. All Rights Reserved</p>
-
       <!-- 탑 버튼 -->
       <div class="top-btn hidden">
         <a href="#">

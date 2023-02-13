@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* Color */
+/* Size */
 * {
   letter-spacing: normal;
   box-sizing: border-box;
@@ -81,7 +82,7 @@ input {
 .input__style:focus, .input__style:focus-visible {
   outline: 0;
   border-width: 0 0 2px 0;
-  border-color: #0739d2;
+  border-color: #e50000;
 }
 
 select::-ms-expand {
@@ -114,7 +115,7 @@ textarea {
 .textarea__style:focus, .textarea__style:focus-visible {
   outline: 0;
   border-width: 0 0 2px 0;
-  border-color: #0739d2;
+  border-color: #e50000;
 }
 
 ::placeholder {
@@ -163,7 +164,7 @@ textarea {
   margin-top: 2rem;
 }
 .slide__scrollbar .swiper-scrollbar-drag {
-  background: #0739d2;
+  background: #e50000;
 }
 
 /* Accordion menu
@@ -247,6 +248,13 @@ textarea {
   background: #000;
   z-index: 2;
 }
+.header.scrolled {
+  padding: 1rem 0;
+  transition: all 0.2s ease-out 0s;
+}
+.header.scrolled .header__gnb {
+  top: 5rem;
+}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -291,7 +299,7 @@ textarea {
   height: 1.4rem;
 }
 .gnb__item.active {
-  background-color: #0739d2;
+  background-color: #e50000;
 }
 .gnb__link {
   display: block;
@@ -307,7 +315,7 @@ textarea {
   background-color: #000;
   text-align: left;
   color: #fff;
-  background-image: url("../images/space_bg_1.jpg");
+  background-image: url("../images/space_bg.jpg");
   background-size: cover;
 }
 .main-visual__title {
@@ -367,8 +375,8 @@ textarea {
   font-size: 1.6rem;
   font-weight: 400;
   border-radius: 0;
-  border: 1px solid #0739d2;
-  background-color: #0739d2;
+  border: 1px solid #e50000;
+  background-color: #e50000;
   color: #fff;
   margin-top: 1.6rem;
 }
@@ -413,8 +421,8 @@ textarea {
   font-size: 1.6rem;
   font-weight: 400;
   border-radius: 0;
-  border: 1px solid #0739d2;
-  background-color: #0739d2;
+  border: 1px solid #e50000;
+  background-color: #e50000;
   color: #fff;
 }
 .section__btn:hover {
@@ -455,7 +463,7 @@ textarea {
 }
 .rank__tab-item.active {
   display: inline-block;
-  border-bottom-color: #0739d2;
+  border-bottom-color: #e50000;
 }
 .rank__tab-content {
   display: none;
@@ -493,7 +501,7 @@ textarea {
   width: 2rem;
   height: 2rem;
   font-size: 1.4rem;
-  background-color: #0739d2;
+  background-color: #e50000;
   color: #fff;
 }
 .rank__info-wrapper {
@@ -659,11 +667,6 @@ textarea {
   right: -100%;
 }
 
-/* Media query
-========================================================================== */
-/* Tablet */
-/* Large Tablet */
-/* Desctop */
 /* 웹접근성
 ========================================================================== */
 /* 스크린리더에서만 읽혀지도록 숨김처리 */
@@ -711,4 +714,100 @@ textarea {
 ========================================================================== */
 .datepicker-picker {
   color: #333;
+}
+
+/* Media query
+========================================================================== */
+/* Tablet */
+@media (min-width: 768px) {
+  .res-inner {
+    position: relative;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+/* Large Tablet */
+@media (min-width: 1024px) {
+  /* HEADER */
+  .header {
+    padding: 1rem 4rem;
+  }
+  .header.scrolled {
+    padding: 0 4rem;
+  }
+  .header.scrolled .header__gnb {
+    top: 0;
+  }
+  .header.scrolled .gnb__item.active::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 6rem;
+    height: 0.4rem;
+    background: #e50000;
+  }
+  .header .res-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__inner {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .header__gnb {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    top: 0;
+  }
+  .gnb {
+    height: auto;
+  }
+  .gnb__list {
+    display: flex;
+  }
+  .gnb__link {
+    padding: 1.4rem 2.6rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  .gnb__link:hover {
+    color: #ccc;
+  }
+  .gnb__btn {
+    display: none !important;
+  }
+  .gnb__item.active {
+    position: relative;
+    background: transparent;
+  }
+  /* Main Visual */
+  .main-visual {
+    height: 70rem;
+  }
+}
+/* Desctop */
+@media (min-width: 1280px) {
+  /* Main Visual */
+  .main-visual {
+    height: 80rem;
+  }
+  .main-visual__title--main {
+    font-size: 6rem;
+  }
+  .main-visual__title--sub {
+    font-size: 3.2rem;
+  }
+}
+/* Wide Desctop */
+@media (min-width: 1440px) {
+  .main-visual {
+    background-position-y: -100px;
+  }
 }

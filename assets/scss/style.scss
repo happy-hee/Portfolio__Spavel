@@ -252,6 +252,13 @@ textarea {
   padding: 1.4rem 0;
   background: #000;
   z-index: 2;
+  &.scrolled {
+    padding: 1rem 0;
+    transition: all 0.2s ease-out 0s;
+    .header__gnb {
+      top: 5rem;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -318,9 +325,8 @@ textarea {
   background-color: #000;
   text-align: left;
   color: #fff;
-  background-image: url("../images/space_bg_1.jpg");
+  background-image: url("../images/space_bg.jpg");
   background-size: cover;
-
   &__title {
     position: absolute;
     top: 50%;
@@ -665,18 +671,6 @@ textarea {
   }
 }
 
-/* Media query
-========================================================================== */
-/* Tablet */
-@media (min-width: 768px) {
-}
-/* Large Tablet */
-@media (min-width: 1024px) {
-}
-/* Desctop */
-@media (min-width: 1280px) {
-}
-
 /* 웹접근성
 ========================================================================== */
 /* 스크린리더에서만 읽혀지도록 숨김처리 */
@@ -725,4 +719,107 @@ textarea {
 ========================================================================== */
 .datepicker-picker {
   color: #333;
+}
+
+/* Media query
+========================================================================== */
+/* Tablet */
+@media (min-width: 768px) {
+  .res-inner {
+    position: relative;
+    max-width: $desktop-size;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+/* Large Tablet */
+@media (min-width: 1024px) {
+  /* HEADER */
+  .header {
+    padding: 1rem 4rem;
+    &.scrolled {
+      padding: 0 4rem;
+      .header__gnb {
+        top: 0;
+      }
+      .gnb__item.active::after {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 0.4rem;
+        background: $point-color;
+      }
+    }
+    .res-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__inner {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    &__gnb {
+      position: relative;
+      display: block;
+      background-color: transparent;
+      top: 0;
+    }
+  }
+  .gnb {
+    height: auto;
+    &__list {
+      display: flex;
+    }
+    &__link {
+      padding: 1.4rem 2.6rem;
+      font-weight: 400;
+      font-size: 1.8rem;
+      &:hover {
+        color: #ccc;
+      }
+    }
+    &__btn {
+      display: none !important;
+    }
+    &__item {
+      &.active {
+        position: relative;
+        background: transparent;
+      }
+    }
+  }
+
+  /* Main Visual */
+  .main-visual {
+    height: 70rem;
+  }
+}
+
+/* Desctop */
+@media (min-width: 1280px) {
+  /* Main Visual */
+  .main-visual {
+    height: 80rem;
+    &__title {
+      &--main {
+        font-size: 6rem;
+      }
+      &--sub {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+/* Wide Desctop */
+@media (min-width: 1440px) {
+  .main-visual {
+    background-position-y: -100px;
+  }
 }
