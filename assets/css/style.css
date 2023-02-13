@@ -340,7 +340,7 @@ textarea::placeholder {
 .main-visual__title {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  margin-top: -6.1rem;
   left: 2rem;
   font-family: "Poppins", sans-serif;
 }
@@ -834,6 +834,9 @@ textarea::placeholder {
   /* Main Visual */
   .main-visual {
     height: 70rem;
+  }
+  .main-visual__title {
+    margin-top: -8.9rem;
   }
   /* Reserve */
   .reserve__section {

@@ -16,6 +16,8 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>(작업중) SPAVEL</title>
   </head>
@@ -83,7 +85,7 @@
     <!-- Main Visual -->
     <div class="main-visual" id="mainVisual">
       <div class="res-inner">
-        <div class="main-visual__title">
+        <div class="main-visual__title" data-aos="fade-down">
           <p class="main-visual__title--main">WE ARE SPAVEL</p>
           <p class="main-visual__title--sub">Let's go space with spavel !</p>
           <p class="main-visual__title--sub">we are waiting for you</p>
@@ -141,11 +143,11 @@
     <!-- Planet -->
     <section class="section planet__section" id="planetSection">
       <div class="res-inner">
-        <div class="section__title-wrapper">
+        <div class="section__title-wrapper" data-aos="fade-down">
           <h2 class="section__title">Planet info</h2>
         </div>
         <!-- 슬라이드 -->
-        <div class="section__slide">
+        <div class="section__slide" data-aos="fade-down">
           <!-- 슬라이드 상단 -->
           <div class="slide__top">
             <div class="slide__navigation">
@@ -282,10 +284,10 @@
     <!-- Rank -->
     <section class="section rank__section" id="rankSection">
       <div class="res-inner">
-        <div class="section__title-wrapper">
+        <div class="section__title-wrapper" data-aos="fade-down">
           <h2 class="section__title">Planet rank</h2>
         </div>
-        <div class="section__content">
+        <div class="section__content" data-aos="fade-down">
           <!-- 탭메뉴 -->
           <div class="rank__top">
             <ul class="rank__tab">
@@ -596,13 +598,13 @@
     <!-- Faq -->
     <section class="section faq__section" id="faqSection">
       <div class="res-inner">
-        <div class="section__title-wrapper">
+        <div class="section__title-wrapper" data-aos="fade-down">
           <h2 class="section__title">
             Frequently <br />
             asked questions
           </h2>
         </div>
-        <div class="section__content">
+        <div class="section__content" data-aos="fade-down">
           <ul class="accordion__menu">
             <li class="accordion__item" tabindex="0">
               <div class="accordion__top">
@@ -657,11 +659,11 @@
     <!-- News -->
     <section class="section news__section" id="newsSection">
       <div class="res-inner">
-        <div class="section__title-wrapper">
+        <div class="section__title-wrapper" data-aos="fade-down">
           <h2 class="section__title">News</h2>
         </div>
         <!-- 슬라이드 -->
-        <div class="section__content section__slide">
+        <div class="section__content section__slide" data-aos="fade-down">
           <!-- 슬라이드 상단 -->
           <div class="slide__top">
             <div class="slide__navigation">
@@ -781,10 +783,10 @@
     <!-- Contact -->
     <section class="section contact__section" id="contactSection">
       <div class="res-inner">
-        <div class="section__title-wrapper">
+        <div class="section__title-wrapper" data-aos="fade-down">
           <h2 class="section__title">Contact</h2>
         </div>
-        <div class="section__content">
+        <div class="section__content" data-aos="fade-down">
           <div class="contact__form-wrapper">
             <!-- 이름 -->
             <div class="contact__form">
@@ -943,6 +945,8 @@
     <script
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjAOcsZ_hQrnHMlsaUr88aGe4JP8WOrkE&callback=initMap"></script>
+    <!-- AOS 스크립트 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

@@ -283,3 +283,13 @@ window.addEventListener("scroll", () => {
     document.querySelector(".header").classList.remove("scrolled");
   }
 });
+
+/**
+ * 스크롤 애니메이션 효과
+ * https://michalsnik.github.io/aos/
+ */
+AOS.init({
+  offset: 0, // 트리거 포인트 offset (px)
+  delay: 0, // 딜레이 (0 ~ 3000)
+  duration: 800, // 시간
+});

@@ -348,7 +348,7 @@ textarea {
   &__title {
     position: absolute;
     top: 50%;
-    transform: translateY(-45%);
+    margin-top: -6.1rem;
     left: 2rem;
     font-family: $font-title;
     &--main {
@@ -842,6 +842,9 @@ textarea {
   /* Main Visual */
   .main-visual {
     height: 70rem;
+    &__title {
+      margin-top: -8.9rem;
+    }
   }
 
   /* Reserve */
