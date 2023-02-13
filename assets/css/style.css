@@ -213,7 +213,7 @@ textarea {
   display: block;
   width: 1.8rem;
   height: 1.8rem;
-  background: url(../images/icon/icon_arrow_blue.png) no-repeat;
+  background: url(../images/icon/icon_arrow_red.png) no-repeat;
   background-size: 100%;
   transition: transform 0.2s linear;
 }
@@ -904,7 +904,6 @@ textarea {
   .planet__navigation-btn img {
     width: 100%;
   }
-  /* 웹 접근성 */
   .skip-navigation {
     display: none;
   }
@@ -939,6 +938,17 @@ textarea {
   }
   .rank__info {
     margin-top: 1rem;
+  }
+  /* Accordion menu */
+  .accordion__top {
+    padding: 3rem 6rem 3rem 3rem;
+    font-size: 2rem;
+  }
+  .accordion__body {
+    font-size: 1.8rem;
+  }
+  .accordion__item.active .accordion__body {
+    padding-left: 3.2rem;
   }
 }
 /* Desctop */
