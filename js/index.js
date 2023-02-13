@@ -78,8 +78,8 @@ const newsSwiper = new Swiper(newsSlide, {
  * https://mymth.github.io/vanillajs-datepicker/#/?id=using-from-browser
  */
 
-const checkinInput = document.querySelector('input[name="checkinInput"]');
-const checkoutInput = document.querySelector('input[name="checkoutInput"]');
+const checkinInput = document.querySelector('input[id="checkinInput"]');
+const checkoutInput = document.querySelector('input[id="checkoutInput"]');
 //input 에 기본적으로 오늘 날짜 표시
 checkinInput.value = new Date();
 checkoutInput.value = new Date();
