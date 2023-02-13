@@ -780,42 +780,47 @@
 
     <!-- Contact -->
     <section class="section contact__section" id="contactSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">Contact</h2>
-      </div>
-      <div class="section__content">
-        <div class="contact__form-wrapper">
-          <!-- 이름 -->
-          <div class="contact__form">
-            <label class="contact__label" for="name">Name</label>
-            <input
-              class="contact__input input__style"
-              id="name"
-              type="text"
-              placeholder="Name" />
-          </div>
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Contact</h2>
+        </div>
+        <div class="section__content">
+          <div class="contact__form-wrapper">
+            <!-- 이름 -->
+            <div class="contact__form">
+              <label class="contact__label" for="name">Name</label>
+              <input
+                class="contact__input input__style"
+                id="name"
+                type="text"
+                placeholder="Name" />
+            </div>
 
-          <div class="contact__form">
-            <label class="contact__label" for="email">E-mail</label>
-            <input
-              class="contact__input input__style"
-              type="email"
-              id="email"
-              placeholder="E-mail" />
+            <div class="contact__form">
+              <label class="contact__label" for="email">E-mail</label>
+              <input
+                class="contact__input input__style"
+                type="email"
+                id="email"
+                placeholder="E-mail" />
+            </div>
+            <div class="contact__form">
+              <label class="contact__label" for="content">Message</label>
+              <textarea
+                class="contact__textarea textarea__style"
+                name="contact-content"
+                id="content"
+                cols="30"
+                rows="10"
+                placeholder="Write your message."></textarea>
+            </div>
+            <button
+              class="section__btn"
+              type="button"
+              onclick="submitContact()">
+              Submit
+            </button>
           </div>
-          <div class="contact__form">
-            <label class="contact__label" for="content">Message</label>
-            <textarea
-              class="contact__textarea textarea__style"
-              name="contact-content"
-              id="content"
-              cols="30"
-              rows="10"
-              placeholder="Write your message."></textarea>
-          </div>
-          <button class="section__btn" type="button" onclick="submitContact()">
-            Submit
-          </button>
         </div>
       </div>
     </section>

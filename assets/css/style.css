@@ -84,11 +84,14 @@ input {
   border-style: solid;
   font-size: 1.6rem;
 }
+input ::placeholder {
+  font-weight: 300;
+}
 
 .input__style:focus, .input__style:focus-visible {
   outline: 0;
   border-width: 0 0 2px 0;
-  border-color: #e50000;
+  border-color: #000;
 }
 
 select::-ms-expand {
@@ -117,17 +120,20 @@ textarea {
   resize: none;
   font-family: "Noto Sans KR", sans-serif;
 }
+textarea::placeholder {
+  font-weight: 400;
+}
 
 .textarea__style:focus, .textarea__style:focus-visible {
   outline: 0;
   border-width: 0 0 2px 0;
-  border-color: #e50000;
+  border-color: #000;
 }
 
 ::placeholder {
   color: #bbb;
   font-size: 1.4rem;
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 
 /* slide
@@ -540,14 +546,14 @@ textarea {
 ========================================================================== */
 .faq__section {
   color: #000;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 
 /* News
 ========================================================================== */
 .news__section {
   color: #000;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 .news__section .slide__img {
   min-height: 20rem;
@@ -569,13 +575,17 @@ textarea {
 ========================================================================== */
 .contact__section {
   color: #000;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 .contact__form-wrapper {
   margin: 0 auto;
+  padding: 3rem 2rem;
+  box-shadow: 0px 2px 5px 1px rgba(128, 128, 128, 0.22);
+  border-radius: 1rem;
+  background: #fff;
 }
 .contact__form {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: left;
 }
 .contact__label {
@@ -586,11 +596,12 @@ textarea {
 }
 .contact__input {
   height: 4.2rem;
+  font-size: 1.4rem;
 }
 .contact__textarea {
   padding: 1.4rem 0;
   border-width: 0 0 2px 0;
-  height: 9rem;
+  height: 12rem;
 }
 
 .map__section {
@@ -845,6 +856,9 @@ textarea {
     letter-spacing: -0.2rem;
     line-height: 6rem;
   }
+  .section__btn {
+    width: auto;
+  }
   /* Slide */
   .slide__top {
     display: block;
@@ -1004,6 +1018,21 @@ textarea {
   }
   .rank__img-wrapper {
     height: 24rem;
+  }
+  /* Contact */
+  .contact__form-wrapper {
+    max-width: 90rem;
+    padding: 5rem 5rem;
+  }
+  .contact__form {
+    margin-bottom: 4rem;
+  }
+  .contact__label {
+    margin-bottom: 1.4rem;
+    font-size: 1.6rem;
+  }
+  .contact__textarea {
+    height: 19rem;
   }
 }
 /* Wide Desctop */
