@@ -926,7 +926,7 @@ textarea::placeholder {
     cursor: pointer;
   }
   .slide__navigation-btn--rotate {
-    rotate: 180deg;
+    transform: rotate(-180deg);
   }
   .slide__navigation-btn img {
     width: 100%;

@@ -938,7 +938,7 @@ textarea {
         width: 6rem;
         cursor: pointer;
         &--rotate {
-          rotate: 180deg;
+          transform: rotate(-180deg);
         }
         img {
           width: 100%;
