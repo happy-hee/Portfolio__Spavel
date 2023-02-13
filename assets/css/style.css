@@ -989,6 +989,20 @@ textarea::placeholder {
   .news__section .slide__scrollbar {
     margin-top: 3rem;
   }
+  /* Contact */
+  .contact__form-wrapper {
+    padding: 5rem 5rem;
+  }
+  .contact__form {
+    margin-bottom: 4rem;
+  }
+  .contact__label {
+    margin-bottom: 1.4rem;
+    font-size: 1.6rem;
+  }
+  .contact__textarea {
+    height: 19rem;
+  }
   .map__section {
     height: 60rem;
   }
@@ -1021,21 +1035,6 @@ textarea::placeholder {
   }
   .rank__img-wrapper {
     height: 24rem;
-  }
-  /* Contact */
-  .contact__form-wrapper {
-    max-width: 90rem;
-    padding: 5rem 5rem;
-  }
-  .contact__form {
-    margin-bottom: 4rem;
-  }
-  .contact__label {
-    margin-bottom: 1.4rem;
-    font-size: 1.6rem;
-  }
-  .contact__textarea {
-    height: 19rem;
   }
 }
 /* Wide Desctop */

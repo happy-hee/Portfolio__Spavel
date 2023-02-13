@@ -1036,6 +1036,23 @@ textarea {
       }
     }
   }
+
+  /* Contact */
+  .contact {
+    &__form-wrapper {
+      padding: 5rem 5rem;
+    }
+    &__form {
+      margin-bottom: 4rem;
+    }
+    &__label {
+      margin-bottom: 1.4rem;
+      font-size: 1.6rem;
+    }
+    &__textarea {
+      height: 19rem;
+    }
+  }
   .map {
     &__section {
       height: 60rem;
@@ -1076,24 +1093,6 @@ textarea {
     }
     &__img-wrapper {
       height: 24rem;
-    }
-  }
-
-  /* Contact */
-  .contact {
-    &__form-wrapper {
-      max-width: 90rem;
-      padding: 5rem 5rem;
-    }
-    &__form {
-      margin-bottom: 4rem;
-    }
-    &__label {
-      margin-bottom: 1.4rem;
-      font-size: 1.6rem;
-    }
-    &__textarea {
-      height: 19rem;
     }
   }
 }
