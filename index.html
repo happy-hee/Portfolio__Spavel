@@ -147,16 +147,16 @@
         <!-- 슬라이드 -->
         <div class="section__slide">
           <!-- 슬라이드 상단 -->
-          <div class="planet__top">
-            <div class="planet__navigation">
+          <div class="slide__top">
+            <div class="slide__navigation">
               <div
-                class="planet__navigation-btn planet__navigation-btn--rotate"
-                id="slideNavPrev">
+                class="slide__navigation-btn slide__navigation-btn--rotate"
+                id="planetPrev">
                 <img
                   src="./assets/images/icon/icon_arrow_long.png"
                   alt="Prev Slide" />
               </div>
-              <div class="planet__navigation-btn" id="slideNavNext">
+              <div class="slide__navigation-btn" id="planetNext">
                 <img
                   src="./assets/images/icon/icon_arrow_long.png"
                   alt="Next Slide" />
@@ -164,7 +164,7 @@
             </div>
           </div>
 
-          <div class="swiper slide planetSlide">
+          <div class="swiper slide" id="planetSlide">
             <div class="swiper-wrapper slide__wrapper">
               <!-- Saturn -->
               <div class="swiper-slide slide__item" tabindex="0">
@@ -259,7 +259,7 @@
                 </div>
               </div>
             </div>
-            <div class="slide__scrollbar"></div>
+            <div class="slide__scrollbar" id="planetScrollbar"></div>
           </div>
 
           <!-- (웹접근성) Skip navigation -->
@@ -656,105 +656,124 @@
 
     <!-- News -->
     <section class="section news__section" id="newsSection">
-      <div class="section__title-wrapper">
-        <h2 class="section__title">News</h2>
-      </div>
-      <!-- 슬라이드 -->
-      <div class="section__content section__slide">
-        <div class="swiper slide" id="newsSlide">
-          <div class="swiper-wrapper slide__wrapper">
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
+      <div class="res-inner">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">News</h2>
+        </div>
+        <!-- 슬라이드 -->
+        <div class="section__content section__slide">
+          <!-- 슬라이드 상단 -->
+          <div class="slide__top">
+            <div class="slide__navigation">
+              <div
+                class="slide__navigation-btn slide__navigation-btn--rotate"
+                id="newsPrev">
                 <img
-                  class="slide__img"
-                  src="./assets/images/news/news_1.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
+                  src="./assets/images/icon/icon_arrow_long.png"
+                  alt="Prev Slide" />
+              </div>
+              <div class="slide__navigation-btn" id="newsNext">
                 <img
-                  class="slide__img"
-                  src="./assets/images/news/news_2.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_3.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_4.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide slide__item">
-              <a href="./index.html">
-                <img
-                  class="slide__img"
-                  src="./assets/images/news/news_5.jpg"
-                  alt="News Title" />
-                <div class="slide__text-box">
-                  <div class="slide__title">News Title</div>
-                  <div class="slide__content">
-                    <p>
-                      Suspendisse ligula justo, placerat a mauris nec, aliquam
-                      dictum nisl. Nunc imperdiet nec velit a vulputate.
-                    </p>
-                    <p class="slide__content--sub">2023 - 03 - 01</p>
-                  </div>
-                </div>
-              </a>
+                  src="./assets/images/icon/icon_arrow_long.png"
+                  alt="Next Slide" />
+              </div>
             </div>
           </div>
-          <div class="slide__scrollbar" id="slideScrollbar"></div>
+          <div class="swiper slide" id="newsSlide">
+            <div class="swiper-wrapper slide__wrapper">
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_1.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_2.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_3.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_4.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide slide__item">
+                <a href="./index.html">
+                  <img
+                    class="slide__img"
+                    src="./assets/images/news/news_5.jpg"
+                    alt="News Title" />
+                  <div class="slide__text-box">
+                    <div class="slide__title">News Title</div>
+                    <div class="slide__content">
+                      <p>
+                        Suspendisse ligula justo, placerat a mauris nec, aliquam
+                        dictum nisl. Nunc imperdiet nec velit a vulputate.
+                      </p>
+                      <p class="slide__content--sub">2023 - 03 - 01</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slide__scrollbar" id="newsScrollbar"></div>
+          </div>
         </div>
       </div>
     </section>

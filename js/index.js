@@ -3,7 +3,7 @@
  * https://swiperjs.com/
  */
 // Planet 슬라이드 적용
-const planetSlide = document.querySelector(".planetSlide");
+const planetSlide = document.querySelector("#planetSlide");
 const planetSwiper = new Swiper(planetSlide, {
   slidesPerView: "auto",
   loop: false,
@@ -12,12 +12,12 @@ const planetSwiper = new Swiper(planetSlide, {
   watchOverflow: true, //마우스 클릭으로 슬라이드 이동
   // 네비게이션
   navigation: {
-    prevEl: "#slideNavPrev",
-    nextEl: "#slideNavNext",
+    prevEl: "#planetPrev",
+    nextEl: "#planetNext",
   },
   // 스크롤바
   scrollbar: {
-    el: ".slide__scrollbar",
+    el: "#planetScrollbar",
     hide: true,
   },
   // 접근성
@@ -49,9 +49,14 @@ const newsSwiper = new Swiper(newsSlide, {
   clickable: true,
   allowTouchMove: true,
   spaceBetween: 14,
+  // 네비게이션
+  navigation: {
+    prevEl: "#newsPrev",
+    nextEl: "#newsNext",
+  },
   // 스크롤바
   scrollbar: {
-    el: "#slideScrollbar",
+    el: "#newsScrollbar",
     hide: true,
   },
   // 접근성
@@ -60,6 +65,11 @@ const newsSwiper = new Swiper(newsSlide, {
     nextSlideMessage: "Next Slide",
     prevSlideMessage: "Prev Slide",
     slideLabelMessage: "{{index}} / {{slidesLength}}",
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3, //브라우저가 1024보다 클 때
+    },
   },
 });
 

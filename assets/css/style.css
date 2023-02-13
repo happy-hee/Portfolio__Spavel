@@ -137,6 +137,9 @@ textarea {
   margin-right: -2rem;
   padding-right: 2rem;
 }
+.slide__top {
+  display: none;
+}
 .slide__item {
   width: 90%;
 }
@@ -842,9 +845,28 @@ textarea {
     letter-spacing: -0.2rem;
     line-height: 6rem;
   }
+  /* Slide */
+  .slide__top {
+    display: block;
+  }
+  .slide__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .slide__navigation-btn {
+    width: 6rem;
+    cursor: pointer;
+  }
+  .slide__navigation-btn--rotate {
+    rotate: 180deg;
+  }
+  .slide__navigation-btn img {
+    width: 100%;
+  }
   /* Planet */
   .planet__section .slide {
-    padding: 2rem 0 0 0;
+    padding: 0;
     margin: 0;
   }
   .planet__section .slide__img {
@@ -886,23 +908,6 @@ textarea {
   }
   .planet__section .slide__scrollbar {
     margin-top: 6rem;
-  }
-  .planet__top {
-    display: block;
-  }
-  .planet__navigation {
-    display: flex;
-    justify-content: space-between;
-  }
-  .planet__navigation-btn {
-    width: 6rem;
-    cursor: pointer;
-  }
-  .planet__navigation-btn--rotate {
-    rotate: 180deg;
-  }
-  .planet__navigation-btn img {
-    width: 100%;
   }
   .skip-navigation {
     display: none;
@@ -949,6 +954,26 @@ textarea {
   }
   .accordion__item.active .accordion__body {
     padding-left: 3.2rem;
+  }
+  /* News */
+  .news__section .slide {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .news__section .slide__item:last-child {
+    margin-right: 0 !important;
+  }
+  .news__section .slide__img {
+    min-height: 30rem;
+  }
+  .news__section .slide__title {
+    font-size: 1.8rem;
+  }
+  .news__section .slide__content--sub {
+    margin-top: 3rem;
+  }
+  .news__section .slide__scrollbar {
+    margin-top: 3rem;
   }
 }
 /* Desctop */

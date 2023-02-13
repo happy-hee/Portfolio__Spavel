@@ -137,6 +137,9 @@ textarea {
   position: relative;
   margin-right: -2rem;
   padding-right: 2rem;
+  &__top {
+    display: none;
+  }
   &__item {
     width: 90%;
   }
@@ -865,11 +868,33 @@ textarea {
     }
   }
 
+  /* Slide */
+  .slide {
+    &__top {
+      display: block;
+    }
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      &-btn {
+        width: 6rem;
+        cursor: pointer;
+        &--rotate {
+          rotate: 180deg;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   /* Planet */
   .planet {
     &__section {
       .slide {
-        padding: 2rem 0 0 0;
+        padding: 0;
         margin: 0;
         &__img {
           width: 50%;
@@ -910,23 +935,6 @@ textarea {
         }
         &__scrollbar {
           margin-top: 6rem;
-        }
-      }
-    }
-    &__top {
-      display: block;
-    }
-    &__navigation {
-      display: flex;
-      justify-content: space-between;
-      &-btn {
-        width: 6rem;
-        cursor: pointer;
-        &--rotate {
-          rotate: 180deg;
-        }
-        img {
-          width: 100%;
         }
       }
     }
@@ -982,6 +990,35 @@ textarea {
     &__item.active {
       .accordion__body {
         padding-left: 3.2rem;
+      }
+    }
+  }
+
+  /* News */
+  .news {
+    &__section {
+      .slide {
+        margin-right: 0;
+        padding-right: 0;
+        &__item {
+          &:last-child {
+            margin-right: 0 !important;
+          }
+        }
+        &__img {
+          min-height: 30rem;
+        }
+        &__title {
+          font-size: 1.8rem;
+        }
+        &__content {
+          &--sub {
+            margin-top: 3rem;
+          }
+        }
+        &__scrollbar {
+          margin-top: 3rem;
+        }
       }
     }
   }
