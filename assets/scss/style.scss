@@ -748,6 +748,24 @@ textarea {
 .datepicker-picker {
   color: #333;
 }
+.datepicker-main {
+  padding: 4px;
+}
+.datepicker-controls .button {
+  font-size: 1.6rem;
+}
+.datepicker-grid {
+  width: 22rem;
+  height: 17rem;
+}
+.datepicker-view .dow {
+  font-size: 1.4rem;
+  height: 2rem;
+}
+.datepicker-cell,
+.datepicker-view .week {
+  font-size: 1.4rem;
+}
 
 /* Media query
 ========================================================================== */
