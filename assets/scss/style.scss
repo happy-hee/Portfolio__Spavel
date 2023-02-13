@@ -273,7 +273,6 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
     margin: 0 auto;
   }
   &__logo {
@@ -330,7 +329,7 @@ textarea {
 ========================================================================== */
 .main-visual {
   position: relative;
-  padding: 5.7rem 2rem 2rem 2rem;
+  padding: 5.7rem 0 2rem 0;
   height: 48rem;
   background-color: #000;
   text-align: left;
@@ -353,13 +352,16 @@ textarea {
       font-weight: 300;
     }
   }
+  .res-inner {
+    position: static;
+  }
 }
 
 /* Reserve
 ========================================================================== */
 .reserve {
   &__section {
-    padding: 2rem;
+    padding: 2rem 0;
     @include black-bg-content;
     text-align: center;
   }
@@ -400,9 +402,9 @@ textarea {
   padding: 6rem 0;
   overflow: hidden;
   text-align: center;
-  &__content {
-    padding: 0 2rem;
-  }
+  // &__content {
+  //   padding: 0 2rem;
+  // }
   &__slide {
     position: relative;
     .skip-navigation {
@@ -410,7 +412,6 @@ textarea {
     }
   }
   &__title-wrapper {
-    padding: 0 2rem;
     margin-bottom: 3rem;
   }
   &__title {
@@ -493,6 +494,7 @@ textarea {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 4px solid #ffffff;
   }
   &__number {
     position: absolute;
@@ -807,15 +809,15 @@ textarea {
   /* Main Visual */
   .main-visual {
     height: 70rem;
-    &__title {
-      left: 0;
-    }
   }
 
   /* Reserve */
   .reserve {
     &__section {
       padding: 2rem 0;
+      // .res-inner {
+      //   padding: 0;
+      // }
     }
     &__row-wrap {
       display: flex;
@@ -844,7 +846,7 @@ textarea {
     &__btn {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 2rem;
       padding: 1rem;
       margin-top: 0;
       width: 15rem;
@@ -864,17 +866,14 @@ textarea {
   }
 
   /* Planet */
-  .slide {
-    overflow: visible;
-  }
   .planet {
     &__section {
       .slide {
-        padding: 3rem 0 0 0;
+        padding: 2rem 0 0 0;
         margin: 0;
         &__img {
           width: 50%;
-          height: 50rem;
+          height: 45rem;
           max-height: none;
           box-shadow: 15px 15px 0px 0px #e9e9e9;
         }
@@ -937,6 +936,41 @@ textarea {
   .skip-navigation {
     display: none;
   }
+
+  /* Rank */
+  .rank {
+    &__top {
+      margin-bottom: 5rem;
+    }
+    &__tab-item {
+      font-size: 2rem;
+      margin: 0 3rem;
+    }
+    &__list-wrapper {
+      display: flex;
+      margin: 0 -1rem;
+    }
+    &__list {
+      width: 20%;
+      margin: 0 1rem;
+    }
+    &__link {
+      flex-direction: column;
+    }
+    &__img-wrapper {
+      width: 100%;
+      height: 21rem;
+    }
+    &__img {
+      border: 5px solid #fff;
+    }
+    &__info-wrapper {
+      margin: 2rem 0 0 0;
+    }
+    &__info {
+      margin-top: 1rem;
+    }
+  }
 }
 
 /* Desctop */
@@ -944,6 +978,9 @@ textarea {
   /* Main Visual */
   .main-visual {
     height: 75rem;
+    .res-inner {
+      position: relative;
+    }
     &__title {
       &--main {
         font-size: 6rem;
@@ -956,7 +993,19 @@ textarea {
   /* Reserve */
   .reserve {
     &__section {
-      padding: 4rem 2rem;
+      padding: 4rem 0;
+    }
+  }
+  /* Rank */
+  .rank {
+    &__list-wrapper {
+      margin: 0 -1.6rem;
+    }
+    &__list {
+      margin: 0 1.6rem;
+    }
+    &__img-wrapper {
+      height: 24rem;
     }
   }
 }
