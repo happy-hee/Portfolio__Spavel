@@ -357,16 +357,13 @@ textarea {
   font-weight: 300;
   display: block;
 }
-.reserve__input {
-  margin-top: 0.4rem;
-  background: #000;
-  color: #fff;
-  font-size: 1.8rem;
-}
-.reserve__select {
+.reserve__input, .reserve__select {
   margin-top: 0.4rem;
   color: #fff;
+  background-color: #000;
   font-size: 1.8rem;
+  height: 4.3rem;
+  cursor: pointer;
 }
 .reserve__btn {
   display: inline-block;
@@ -719,19 +716,17 @@ textarea {
 /* Media query
 ========================================================================== */
 /* Tablet */
-@media (min-width: 768px) {
+/* Large Tablet */
+@media (min-width: 1024px) {
   .res-inner {
     position: relative;
     max-width: 1280px;
     height: 100%;
     margin: 0 auto;
   }
-}
-/* Large Tablet */
-@media (min-width: 1024px) {
   /* HEADER */
   .header {
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
   }
   .header.scrolled {
     padding: 0 4rem;
@@ -791,18 +786,60 @@ textarea {
   .main-visual {
     height: 70rem;
   }
+  .main-visual__title {
+    left: 0;
+  }
+  /* Reserve */
+  .reserve__section {
+    padding: 2rem;
+  }
+  .reserve__row-wrap {
+    display: flex;
+    margin-right: 16rem;
+  }
+  .reserve__row {
+    width: 50%;
+  }
+  .reserve__item {
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: baseline;
+  }
+  .reserve__title {
+    margin-right: 1.6rem;
+    color: #ccc;
+  }
+  .reserve__input, .reserve__select {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+  .reserve__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    margin-top: 0;
+    width: 15rem;
+    height: 4.3rem;
+  }
 }
 /* Desctop */
 @media (min-width: 1280px) {
   /* Main Visual */
   .main-visual {
-    height: 80rem;
+    height: 75rem;
   }
   .main-visual__title--main {
     font-size: 6rem;
   }
   .main-visual__title--sub {
     font-size: 3.2rem;
+  }
+  /* Reserve */
+  .reserve__section {
+    padding: 4rem 2rem;
   }
 }
 /* Wide Desctop */

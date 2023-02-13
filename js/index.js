@@ -1,4 +1,69 @@
 /**
+ * 슬라이드
+ * https://swiperjs.com/
+ */
+// Planet 슬라이드 적용
+const planetSlide = document.querySelector(".planetSlide");
+const planetSwiper = new Swiper(planetSlide, {
+  slidesPerView: "auto",
+  loop: false,
+  clickable: true,
+  allowTouchMove: true,
+  watchOverflow: true, //마우스 클릭으로 슬라이드 이동
+  // 네비게이션
+  navigation: {
+    prevEl: "#skipNavPrev",
+    nextEl: "#skipNavNext",
+  },
+  // 스크롤바
+  scrollbar: {
+    el: ".slide__scrollbar",
+    hide: true,
+  },
+  // 접근성
+  a11y: {
+    enabled: true,
+    nextSlideMessage: "Next Slide",
+    prevSlideMessage: "Prev Slide",
+    slideLabelMessage: "{{index}} / {{slidesLength}}",
+  },
+  spaceBetween: 14,
+  // 반응형 breakpoints
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      spaceBetween: 30,
+    },
+    // when window width is >= 1024px
+    1024: {
+      spaceBetween: 40,
+    },
+  },
+});
+
+//News 슬라이드 적용
+const newsSlide = document.querySelector("#newsSlide");
+const newsSwiper = new Swiper(newsSlide, {
+  slidesPerView: "auto",
+  loop: false,
+  clickable: true,
+  allowTouchMove: true,
+  spaceBetween: 14,
+  // 스크롤바
+  scrollbar: {
+    el: "#slideScrollbar",
+    hide: true,
+  },
+  // 접근성
+  a11y: {
+    enabled: true,
+    nextSlideMessage: "Next Slide",
+    prevSlideMessage: "Prev Slide",
+    slideLabelMessage: "{{index}} / {{slidesLength}}",
+  },
+});
+
+/**
  * 예약 캘린더
  * https://mymth.github.io/vanillajs-datepicker/#/?id=using-from-browser
  */
@@ -38,68 +103,11 @@ const checkinDatepicker = new Datepicker(checkinInput, datePickerOption);
 const checkoutDatepicker = new Datepicker(checkoutInput, datePickerOption);
 
 /**
- * 슬라이드
- * https://swiperjs.com/
+ * Reserve 예약 버튼 클릭시 얼럿
  */
-// Planet 슬라이드 적용
-const planetSlide = document.querySelector(".planetSlide");
-const planetSwiper = new Swiper(planetSlide, {
-  slidesPerView: "auto",
-  loop: false,
-  clickable: true,
-  allowTouchMove: true,
-  watchOverflow: true, //마우스 클릭으로 슬라이드 이동
-  // 네비게이션
-  navigation: {
-    prevEl: ".skip-navigation__btn--prev",
-    nextEl: ".skip-navigation__btn--next",
-  },
-  // 스크롤바
-  scrollbar: {
-    el: ".slide__scrollbar",
-    hide: true,
-  },
-  // 접근성
-  a11y: {
-    enabled: true,
-    nextSlideMessage: "Next Slide",
-    prevSlideMessage: "Prev Slide",
-    slideLabelMessage: "{{index}} / {{slidesLength}}",
-  },
-  spaceBetween: 14,
-  // 반응형 breakpoints
-  breakpoints: {
-    // when window width is >= 768px
-    768: {
-      spaceBetween: 30,
-    },
-    // when window width is >= 1024px
-    1024: {
-      spaceBetween: 40,
-    },
-  },
-});
-
-//News 슬라이드 적용
-const newsSlide = document.querySelector(".newsSlide");
-const newsSwiper = new Swiper(newsSlide, {
-  slidesPerView: "auto",
-  loop: false,
-  clickable: true,
-  allowTouchMove: true,
-  spaceBetween: 14,
-  // 스크롤바
-  scrollbar: {
-    el: ".slide__scrollbar",
-    hide: true,
-  },
-  // 접근성
-  a11y: {
-    enabled: true,
-    nextSlideMessage: "Next Slide",
-    prevSlideMessage: "Prev Slide",
-    slideLabelMessage: "{{index}} / {{slidesLength}}",
-  },
+const reserveBtn = document.querySelector("#reserveBtn");
+reserveBtn.addEventListener("click", () => {
+  alert("예약 되었습니다.");
 });
 
 /**
@@ -127,7 +135,7 @@ tabItem.forEach((item, index) => {
 /**
  * 아코디언 메뉴
  */
-const accordionItems = document.querySelectorAll(".accordionItem");
+const accordionItems = document.querySelectorAll(".accordion__item");
 accordionItems.forEach((accordionItem) => {
   // 클릭시 active
   accordionItem.addEventListener("click", () => {
