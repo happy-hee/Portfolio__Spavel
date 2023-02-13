@@ -1065,7 +1065,17 @@ textarea::placeholder {
   }
   /* Reserve */
   .reserve__section {
-    padding: 4rem 0;
+    padding: 3rem 0 4rem 0;
+  }
+  .reserve__item {
+    display: block;
+    margin-right: 3.2rem;
+  }
+  .reserve__title {
+    margin: 0 0 0.8rem 0;
+  }
+  .reserve__btn {
+    top: 1.5rem;
   }
   /* Rank */
   .rank__list-wrapper {

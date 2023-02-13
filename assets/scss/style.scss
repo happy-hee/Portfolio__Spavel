@@ -830,9 +830,6 @@ textarea {
   .reserve {
     &__section {
       padding: 2rem 0;
-      // .res-inner {
-      //   padding: 0;
-      // }
     }
     &__row-wrapper {
       display: flex;
@@ -1128,7 +1125,17 @@ textarea {
   /* Reserve */
   .reserve {
     &__section {
-      padding: 4rem 0;
+      padding: 3rem 0 4rem 0;
+    }
+    &__item {
+      display: block;
+      margin-right: 3.2rem;
+    }
+    &__title {
+      margin: 0 0 0.8rem 0;
+    }
+    &__btn {
+      top: 1.5rem;
     }
   }
   /* Rank */
