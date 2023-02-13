@@ -117,7 +117,7 @@ const checkoutDatepicker = new Datepicker(checkoutInput, datePickerOption);
  */
 const reserveBtn = document.querySelector("#reserveBtn");
 reserveBtn.addEventListener("click", () => {
-  alert("예약 되었습니다.");
+  alert("Successfully reserved!");
 });
 
 /**
@@ -165,7 +165,7 @@ accordionItems.forEach((accordionItem) => {
  */
 
 const submitContact = () => {
-  alert("Successfully sent");
+  alert("Successfully sent!");
 };
 
 /**
