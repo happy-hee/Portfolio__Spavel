@@ -617,11 +617,11 @@ textarea {
 ========================================================================== */
 .footer {
   position: relative;
-  padding: 3rem 2rem 4rem 2rem;
+  padding: 3rem 0 4rem 0;
   @include black-bg-content;
   &__logo {
     margin-bottom: 2.4rem;
-    opacity: 0.9;
+    opacity: 0.6;
   }
   &__info {
     margin-bottom: 3.4rem;
@@ -634,7 +634,7 @@ textarea {
   &__title {
     margin-bottom: 1.6rem;
     font-weight: 500;
-    color: #ddd;
+    color: #ccc;
   }
   &__list {
     display: flex;
@@ -656,6 +656,7 @@ textarea {
   }
 
   &__social {
+    opacity: 0.7;
     margin-bottom: 1.6rem;
 
     .social {
@@ -833,7 +834,7 @@ textarea {
       //   padding: 0;
       // }
     }
-    &__row-wrap {
+    &__row-wrapper {
       display: flex;
       margin-right: 16rem;
     }
@@ -1056,6 +1057,53 @@ textarea {
   .map {
     &__section {
       height: 60rem;
+    }
+  }
+
+  /* Footer */
+  .footer {
+    &__content {
+      display: flex;
+    }
+    &__info-wrapper {
+      margin-left: 14rem;
+    }
+    &__info {
+      display: flex;
+      width: 100%;
+    }
+    &__column {
+      margin-bottom: 2rem;
+      width: 35rem;
+    }
+    &__item {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    &__social {
+      margin-bottom: 2.6rem;
+      &__item {
+        .github-icon {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+        .notion-icon {
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+        .tstory-icon {
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      }
+    }
+  }
+  .top-btn {
+    bottom: 6rem;
+    right: 4rem;
+    a {
+      font-size: 4.6rem;
     }
   }
 }
