@@ -199,7 +199,7 @@ textarea::placeholder {
 .slide__content--sub {
   margin-top: 1.4rem;
   font-size: 1.4rem;
-  color: #999;
+  color: #595959;
 }
 .slide__scrollbar {
   height: 0.4rem;
@@ -565,7 +565,7 @@ textarea::placeholder {
 .rank__date {
   font-size: 1.4rem;
   margin-top: 1rem;
-  color: #999999;
+  color: #595959;
 }
 
 /* Faq
@@ -764,7 +764,14 @@ textarea::placeholder {
 /* 기타
 ========================================================================== */
 .datepicker-picker {
-  color: #333;
+  color: #000;
+  font-weight: 500;
+}
+
+.datepicker-cell.next:not(.disabled),
+.datepicker-cell.prev:not(.disabled),
+.datepicker-cell.disabled {
+  color: #595959;
 }
 
 .datepicker-main {
