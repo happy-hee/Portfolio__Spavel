@@ -11,14 +11,14 @@ $(function () {
   const gnbCloseBtn = $(".gnb__close-btn");
 
   //사이드메뉴 열기
-  gnbOpenBtn.click(function () {
+  gnbOpenBtn.off().on("click", function () {
     headerGnb.addClass("gnb--open");
     gnbCloseBtn.show();
     gnbOpenBtn.hide();
   });
 
   //사이드메뉴 닫기
-  gnbCloseBtn.click(function () {
+  gnbCloseBtn.off().on("click", function () {
     headerGnb.removeClass("gnb--open");
     gnbCloseBtn.hide();
     gnbOpenBtn.show();
@@ -28,7 +28,7 @@ $(function () {
    * GNB 클릭시 해당 섹션으로 이동
    */
   const clickToSection = function (targetItem) {
-    targetItem.click(function (e) {
+    targetItem.off().on("click", function (e) {
       e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
       $("html, body").animate(
         { scrollTop: $(this.hash).offset().top - 50 },
@@ -79,7 +79,7 @@ $(function () {
   const tabItem = $(".rank__tab-item");
   const tabContent = $(".rank__tab-content");
 
-  tabItem.click(function (e) {
+  tabItem.off().on("click", function (e) {
     e.preventDefault(); // a 태그의 기본 동작(링크 연결) 방지
     tabContent.removeClass("active");
     tabItem.removeClass("active");
@@ -93,9 +93,11 @@ $(function () {
   const accordionItems = $(".accordion__item");
   accordionItems.each(function () {
     // 클릭시 active
-    $(this).click(function () {
-      $(this).toggleClass("active");
-    });
+    $(this)
+      .off()
+      .on("click", function () {
+        $(this).toggleClass("active");
+      });
 
     // 엔터시 active
     $(this).keyup(function (e) {
@@ -129,9 +131,11 @@ $(function () {
   /**
    * Reserve 예약 버튼 클릭시 얼럿
    */
-  $("#reserveBtn").click(function () {
-    alert("Successfully reserved!");
-  });
+  $("#reserveBtn")
+    .off()
+    .on("click", function () {
+      alert("Successfully reserved!");
+    });
 });
 
 /**
