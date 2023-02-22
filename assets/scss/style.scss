@@ -375,6 +375,7 @@ textarea {
     margin-top: -6.1rem;
     left: 2rem;
     font-family: $font-title;
+    animation: fadeInDown 2s;
     &--main {
       font-size: 4rem;
       font-weight: 700;
@@ -761,6 +762,19 @@ textarea {
         right: 0;
       }
     }
+  }
+}
+
+/* 애니메이션 효과
+========================================================================== */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
